@@ -1,0 +1,102 @@
+{
+  "inputs": {
+    "base": "$WORK/signature/notes/tulu_v2_base_l16to25.json",
+    "LSFT_s0": "$WORK/signature/notes/basediff_llama_sft_seed0_l16to25.json",
+    "LSFT_s1": "$WORK/signature/notes/basediff_llama_sft_seed1_l16to25.json",
+    "LSFT_s2": "$WORK/signature/notes/basediff_llama_sft_seed2_l16to25.json",
+    "LSFT_s3": "$WORK/signature/notes/basediff_llama_sft_seed3_l16to25.json"
+  },
+  "hub_k": 32,
+  "post_contrasts": [
+    {
+      "pair": "base->LSFT_s0",
+      "edge_jaccard": 0.9566,
+      "weighted_edge_cosine": 0.9998,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "base->LSFT_s1",
+      "edge_jaccard": 0.9556,
+      "weighted_edge_cosine": 0.9998,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "base->LSFT_s2",
+      "edge_jaccard": 0.956,
+      "weighted_edge_cosine": 0.9998,
+      "hub_jaccard": 0.8824
+    },
+    {
+      "pair": "base->LSFT_s3",
+      "edge_jaccard": 0.9564,
+      "weighted_edge_cosine": 0.9998,
+      "hub_jaccard": 0.9394
+    }
+  ],
+  "seed_null": [
+    {
+      "pair": "LSFT_s0<->LSFT_s1",
+      "edge_jaccard": 0.9751,
+      "weighted_edge_cosine": 0.9999,
+      "hub_jaccard": 1.0
+    },
+    {
+      "pair": "LSFT_s0<->LSFT_s2",
+      "edge_jaccard": 0.9759,
+      "weighted_edge_cosine": 0.9999,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "LSFT_s0<->LSFT_s3",
+      "edge_jaccard": 0.9778,
+      "weighted_edge_cosine": 0.9999,
+      "hub_jaccard": 1.0
+    },
+    {
+      "pair": "LSFT_s1<->LSFT_s2",
+      "edge_jaccard": 0.9743,
+      "weighted_edge_cosine": 0.9999,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "LSFT_s1<->LSFT_s3",
+      "edge_jaccard": 0.9745,
+      "weighted_edge_cosine": 0.9999,
+      "hub_jaccard": 1.0
+    },
+    {
+      "pair": "LSFT_s2<->LSFT_s3",
+      "edge_jaccard": 0.9765,
+      "weighted_edge_cosine": 0.9999,
+      "hub_jaccard": 0.9394
+    }
+  ],
+  "verdict": {
+    "edge_jaccard": {
+      "base_to_LSFT_s0": 0.9566,
+      "seed_null_range": [
+        0.9743,
+        0.9778
+      ],
+      "seed_null_n_pairs": 6,
+      "seed_null_mean": 0.975683,
+      "seed_null_sd": 0.00133,
+      "z": -14.35,
+      "precision_adequate": true,
+      "rl_signature_beyond_seed_noise": false
+    },
+    "weighted_edge_cosine": {
+      "base_to_LSFT_s0": 0.9998,
+      "seed_null_range": [
+        0.9999,
+        0.9999
+      ],
+      "seed_null_n_pairs": 6,
+      "seed_null_mean": 0.9999,
+      "seed_null_sd": 0.0,
+      "z": -822241035295.05,
+      "precision_adequate": false,
+      "rl_signature_beyond_seed_noise": false
+    }
+  }
+}

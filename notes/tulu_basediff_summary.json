@@ -1,0 +1,49 @@
+{
+  "label": "Tulu-3 staircase / Llama-3.1-8B / llama-scope l16->25",
+  "base_graph": "notes/tulu_base_l16to25.json",
+  "rows": {
+    "base": {
+      "nact": 2944,
+      "d_sae_dst": 131072,
+      "t1": 0.604,
+      "gini": 0.78
+    },
+    "SFT": {
+      "nact": 2551,
+      "d_sae_dst": 131072,
+      "t1": 0.612,
+      "gini": 0.789,
+      "dGini_vs_base": 0.009,
+      "dtop1_vs_base": 0.008,
+      "hub_jaccard_vs_base": 0.73
+    },
+    "DPO": {
+      "nact": 2347,
+      "d_sae_dst": 131072,
+      "t1": 0.593,
+      "gini": 0.784,
+      "dGini_vs_base": 0.004,
+      "dtop1_vs_base": -0.011,
+      "hub_jaccard_vs_base": 0.6
+    },
+    "RLVR_PPO": {
+      "nact": 2358,
+      "d_sae_dst": 131072,
+      "t1": 0.594,
+      "gini": 0.785,
+      "dGini_vs_base": 0.005,
+      "dtop1_vs_base": -0.01,
+      "hub_jaccard_vs_base": 0.6
+    },
+    "RLVR_GRPO": {
+      "nact": 2382,
+      "d_sae_dst": 131072,
+      "t1": 0.598,
+      "gini": 0.785,
+      "dGini_vs_base": 0.005,
+      "dtop1_vs_base": -0.006,
+      "hub_jaccard_vs_base": 0.561
+    }
+  },
+  "null_replicates": false
+}

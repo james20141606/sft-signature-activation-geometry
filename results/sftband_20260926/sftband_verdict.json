@@ -1,0 +1,178 @@
+{
+  "prereg": "notes/PREREG_sftband_20260926.md",
+  "L": {
+    "branch": "L1",
+    "note": "",
+    "counts": {
+      "k": 20,
+      "m": 190,
+      "n_outside": 20,
+      "E_b_all_outside": true,
+      "prop1b_ceiling_if_E_b": 0.047619047619047616,
+      "band_min": 0.029750763471579122,
+      "band_max": 0.03902343366996763,
+      "band_mean": 0.03509511311142949,
+      "band_sd": 0.0015201964156274933
+    }
+  },
+  "F": {
+    "branch": "F1",
+    "note": "",
+    "gate_T": {
+      "full_s0": {
+        "first_loss": 1.9654,
+        "last_loss": 0.2865,
+        "n_logged": 29,
+        "rel_weight_delta_l2": 0.0031978953894410776,
+        "pass": true
+      },
+      "full_s1": {
+        "first_loss": 2.0363,
+        "last_loss": 0.3304,
+        "n_logged": 29,
+        "rel_weight_delta_l2": 0.00317543660107908,
+        "pass": true
+      },
+      "full_s2": {
+        "first_loss": 1.9581,
+        "last_loss": 0.2977,
+        "n_logged": 29,
+        "rel_weight_delta_l2": 0.003219714596700402,
+        "pass": true
+      },
+      "full_s3": {
+        "first_loss": 2.0191,
+        "last_loss": 0.2213,
+        "n_logged": 29,
+        "rel_weight_delta_l2": 0.0032083563050271224,
+        "pass": true
+      }
+    },
+    "counts": {
+      "k": 4,
+      "m": 6,
+      "n_outside": 4,
+      "E_b_all_outside": true,
+      "band_min": 0.09523809523809523,
+      "band_max": 0.12593703148425783,
+      "band_mean": 0.11577025325573063,
+      "band_sd": 0.012961584765901576
+    }
+  },
+  "R": {
+    "RS": "RS1",
+    "RS_note": "",
+    "RG": "NOT_RUN",
+    "RG_note": "GRPO family is not the registered 6 runs: wcos:k=5,feat:k=5,dense:k=5,cka:k=5",
+    "per_readout": {
+      "lora_sft": {
+        "edge": {
+          "k": 20,
+          "n_outside": 20,
+          "E_b_all_outside": true
+        },
+        "wcos": {
+          "k": 20,
+          "n_outside": 20,
+          "E_b_all_outside": true
+        },
+        "feat": {
+          "k": 20,
+          "n_outside": 20,
+          "E_b_all_outside": true
+        },
+        "dense": {
+          "k": 20,
+          "n_outside": 20,
+          "E_b_all_outside": true
+        },
+        "cka": {
+          "k": 20,
+          "n_outside": 20,
+          "E_b_all_outside": true
+        }
+      },
+      "full_sft": {
+        "edge": {
+          "k": 4,
+          "n_outside": 4,
+          "E_b_all_outside": true
+        },
+        "wcos": {
+          "k": 4,
+          "n_outside": 4,
+          "E_b_all_outside": true
+        },
+        "feat": {
+          "k": 4,
+          "n_outside": 4,
+          "E_b_all_outside": true
+        },
+        "dense": {
+          "k": 4,
+          "n_outside": 4,
+          "E_b_all_outside": true
+        },
+        "cka": {
+          "k": 4,
+          "n_outside": 4,
+          "E_b_all_outside": true
+        }
+      },
+      "grpo": {
+        "edge": {
+          "k": 5,
+          "n_outside": 0,
+          "E_b_all_outside": false
+        },
+        "wcos": {
+          "k": 5,
+          "n_outside": 0,
+          "E_b_all_outside": false
+        },
+        "feat": {
+          "k": 5,
+          "n_outside": 1,
+          "E_b_all_outside": false
+        },
+        "dense": {
+          "k": 5,
+          "n_outside": 1,
+          "E_b_all_outside": false
+        },
+        "cka": {
+          "k": 5,
+          "n_outside": 1,
+          "E_b_all_outside": false
+        }
+      },
+      "dpo29": {
+        "edge": {
+          "k": 4,
+          "n_outside": 1,
+          "E_b_all_outside": false
+        },
+        "wcos": {
+          "k": 4,
+          "n_outside": 1,
+          "E_b_all_outside": false
+        },
+        "feat": {
+          "k": 4,
+          "n_outside": 3,
+          "E_b_all_outside": false
+        },
+        "dense": {
+          "k": 4,
+          "n_outside": 2,
+          "E_b_all_outside": false
+        },
+        "cka": {
+          "k": 4,
+          "n_outside": 0,
+          "E_b_all_outside": false
+        }
+      }
+    }
+  }
+}

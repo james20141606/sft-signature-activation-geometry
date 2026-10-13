@@ -1,0 +1,251 @@
+{
+ "receipt": "graph_build_audit_20261005 CPU-side records (PREREG_graph_build_audit_20261004.md \u00a72, CPU tests only)",
+ "date": "2026-10-05 (+08:00); cluster login node, no GPU job submitted",
+ "prereg": "notes/PREREG_graph_build_audit_20261004.md (33836ca, \u00a76 cea06cb)",
+ "rebuild_reference": "results/sftband_20260926 (JIDs 18577379-82, all H200; four per-job base rebuilds bit-identical)",
+ "sources": {
+  "sacct": [
+   "sacct_graph_jobs.txt",
+   "sacct_sig_20260628_0806.txt"
+  ],
+  "node_gpu": "node_gres.txt (scontrol show node, current config)",
+  "job_logs": "cluster:$WORK/signature/logs/m2/<name>-<JID>.{out,err}: 'saved -> <file>' lines map each graph file to its JID; GPU name printed only in 11897524, 14851207, 15103738, 15102095, 15240602, 15245979",
+  "env": "rs_qwen_env_distinfo_after_20260501.txt"
+ },
+ "graphs": [
+  {
+   "file": "notes/attribution_graph_v1_qwen3-1p7b_qwenscope_l14to22.json",
+   "jid": "11897524",
+   "node": "<NODE>",
+   "gpu": "L40S",
+   "arch": "sm_89 Ada",
+   "start_EDT": "2026-06-27T01:39",
+   "D_edge_stored_vs_H200_rebuild": 0.0367,
+   "builder_code": "733ecb1 (committed 06-26 22:34 PDT = 06-27 01:34 EDT, 5 min before job start; cluster copy not recoverable)"
+  },
+  {
+   "file": "notes/basediff_grpo_l14to22.json",
+   "jid": "11953743",
+   "node": "<NODE>",
+   "gpu": "A100",
+   "arch": "sm_80 Ampere",
+   "start_EDT": "2026-06-28T04:48",
+   "D_edge_stored_vs_H200_rebuild": null,
+   "builder_code": "adab697 (8074f5d committed 10 min after job end); GRPO baseline@100 checkpoint deleted -> not rebuildable"
+  },
+  {
+   "file": "notes/basediff_sft_l14to22.json",
+   "jid": "11953881",
+   "node": "<NODE>",
+   "gpu": "A100",
+   "arch": "sm_80 Ampere",
+   "start_EDT": "2026-06-28T04:55",
+   "D_edge_stored_vs_H200_rebuild": 0.0344,
+   "builder_code": "adab697"
+  },
+  {
+   "file": "notes/basediff_grpo_s4_l14to22.json",
+   "jid": "11967628",
+   "node": "<NODE>",
+   "gpu": "L40S",
+   "arch": "sm_89 Ada",
+   "start_EDT": "2026-06-28T12:52",
+   "D_edge_stored_vs_H200_rebuild": 0.0325,
+   "builder_code": "8074f5d"
+  },
+  {
+   "file": "notes/basediff_grpo_shaped_l0p1_l14to22.json",
+   "jid": "11967672",
+   "node": "<NODE>",
+   "gpu": "L40S",
+   "arch": "sm_89 Ada",
+   "start_EDT": "2026-06-28T12:55",
+   "D_edge_stored_vs_H200_rebuild": 0.0334,
+   "builder_code": "8074f5d"
+  },
+  {
+   "file": "notes/basediff_grpo_s5_l14to22.json",
+   "jid": "11967672",
+   "node": "<NODE>",
+   "gpu": "L40S",
+   "arch": "sm_89 Ada",
+   "start_EDT": "2026-06-28T12:55",
+   "D_edge_stored_vs_H200_rebuild": 0.0307,
+   "builder_code": "8074f5d"
+  },
+  {
+   "file": "notes/basediff_grpo_s1_l14to22.json",
+   "jid": "12113165",
+   "node": "<NODE>",
+   "gpu": "H200",
+   "arch": "sm_90 Hopper",
+   "start_EDT": "2026-06-30T17:53",
+   "D_edge_stored_vs_H200_rebuild": 0.0,
+   "builder_code": "8074f5d"
+  },
+  {
+   "file": "notes/basediff_grpo_s3_l14to22.json",
+   "jid": "12113165",
+   "node": "<NODE>",
+   "gpu": "H200",
+   "arch": "sm_90 Hopper",
+   "start_EDT": "2026-06-30T17:53",
+   "D_edge_stored_vs_H200_rebuild": 0.0,
+   "builder_code": "8074f5d"
+  },
+  {
+   "file": "notes/basediff_sft_seed{0..3}_l14to22.json (4)",
+   "jid": "14851207",
+   "node": "<NODE>",
+   "gpu": "H200",
+   "arch": "sm_90 Hopper",
+   "start_EDT": "2026-07-27T21:02",
+   "D_edge_stored_vs_H200_rebuild": 0.0,
+   "builder_code": "018133b/d57d865 era"
+  },
+  {
+   "file": "notes/basediff_dpo_seed{0..3}_step29_l14to22.json (4)",
+   "jid": "15103738",
+   "node": "<NODE>",
+   "gpu": "H100",
+   "arch": "sm_90 Hopper",
+   "start_EDT": "2026-08-01T01:05",
+   "D_edge_stored_vs_H200_rebuild": 0.0,
+   "builder_code": "HEAD-equivalent numeric path"
+  },
+  {
+   "file": "notes/basediff_dpo_seed{0..3}_step60_l14to22.json (4)",
+   "jid": "15103738",
+   "node": "<NODE>",
+   "gpu": "H100",
+   "arch": "sm_90 Hopper",
+   "start_EDT": "2026-08-01T01:05",
+   "D_edge_stored_vs_H200_rebuild": null,
+   "builder_code": "same job as the verified 29-step graphs; not rebuilt"
+  },
+  {
+   "file": "notes/basediff_dpo_seed{0..3}_l14to22.json (12-step, 4)",
+   "jid": "15102095",
+   "node": "<NODE>",
+   "gpu": "A100",
+   "arch": "sm_80 Ampere",
+   "start_EDT": "2026-07-31T23:57",
+   "D_edge_stored_vs_H200_rebuild": null,
+   "builder_code": "not rebuilt"
+  },
+  {
+   "file": "notes/basediff_dpo_mc_seed{0..3}_step29_l14to22.json (4)",
+   "jid": "15240602",
+   "node": "<NODE>",
+   "gpu": "H200",
+   "arch": "sm_90 Hopper",
+   "start_EDT": "2026-08-03T19:23",
+   "D_edge_stored_vs_H200_rebuild": null,
+   "builder_code": "not rebuilt"
+  },
+  {
+   "file": "notes/tulu_v2_base_l16to25.json (Llama base)",
+   "jid": "12312283",
+   "node": "<NODE>",
+   "gpu": "A100",
+   "arch": "sm_80 Ampere",
+   "start_EDT": "2026-07-02T20:27",
+   "D_edge_stored_vs_H200_rebuild": null,
+   "builder_code": "not rebuilt"
+  },
+  {
+   "file": "notes/basediff_llama_sft_seed{0..3}_l16to25.json (4)",
+   "jid": "15245979",
+   "node": "<NODE>",
+   "gpu": "H200",
+   "arch": "sm_90 Hopper",
+   "start_EDT": "2026-08-03T21:53",
+   "D_edge_stored_vs_H200_rebuild": null,
+   "builder_code": "not rebuilt"
+  }
+ ],
+ "featstats": [
+  {
+   "files": "notes/featstats_base_l22.json, featstats_grpo_l22.json",
+   "jid": "11984904",
+   "node": "<NODE>",
+   "gpu": "A100",
+   "start_EDT": "2026-06-28T21:18"
+  },
+  {
+   "files": "notes/featstats_s{1,3,4,5}_l22.json",
+   "jid": "12125673",
+   "node": "<NODE>",
+   "gpu": "L40S",
+   "start_EDT": "2026-06-30T22:29"
+  }
+ ],
+ "pattern": {
+  "non_reproducing": "5/5 rebuild-tested graphs built 06-27..06-28 (base, audited SFT, s4@300, s5@300, SHAPED) do not reproduce; all five were built on non-Hopper GPUs (L40S x4 incl. base, A100 x1). The GRPO baseline (A100, 06-28) belongs to the same batch but cannot be tested (checkpoint deleted).",
+  "reproducing": "10/10 rebuild-tested graphs built 06-30 or later (s1@200, s3@100, SFT seeds 0-3, DPO@29 seeds 0-3) reproduce bit-exactly; all were built on Hopper (H200 x6, H100 x4).",
+  "tested_counts": {
+   "non_reproducing_tested": 5,
+   "reproducing_tested": 10,
+   "note": "base, audited SFT, s4, s5, SHAPED = 5 non-reproducing; GRPO baseline untestable (checkpoint deleted)"
+  },
+  "key_contrast": "s4@300/s5@300/SHAPED (L40S <NODE>, 06-28 12:52-13:00 EDT) do not reproduce; s1@200/s3@100 (H200 <NODE>, 06-30 17:53 EDT) reproduce bit-exactly. Between the two: same builder commit 8074f5d, no package install in rs-qwen-env (06-28 04:21 install precedes both; next install 07-17), same model/SAE/dataset revisions. Differences on record: GPU architecture, node, 2 days.",
+  "confound": "date and architecture are collinear in the tested set: no non-Hopper graph built after 06-30 has been rebuild-tested. DPO 12-step graphs (A100 <NODE>, 07-31) are the discriminating case."
+ },
+ "candidates": {
+  "R1_gpu_architecture": {
+   "rank": 1,
+   "records": "SUPPORTED",
+   "detail": "perfect split by architecture in the tested set (5/5 non-reproducing on L40S/A100, 10/10 reproducing on H100/H200); the only recorded difference inside the s4/s5/SHAPED vs s1/s3 pair besides node and date. Not confirmed: the prereg requires a single-factor GPU rebuild that reproduces the stored base bit-exactly."
+  },
+  "R7_nondeterminism_on_non_hopper": {
+   "rank": 2,
+   "records": "NOT SEPARABLE from R1 by records",
+   "detail": "within-environment determinism shown only on H200 (four per-job rebuilds identical). Two same-job builds on L40S separate R7 from R1."
+  },
+  "R8_attention_kernel_defaults": {
+   "rank": 3,
+   "records": "no record of a setting change",
+   "detail": "TransformerLens computes attention itself; any arch-dependent kernel choice (bf16 GEMM algorithm, split-K) is the mechanism of R1, not a separate setting. dtype bfloat16 in every job script."
+  },
+  "R3_builder_code_version": {
+   "rank": 4,
+   "records": "DISFAVOURED",
+   "detail": "default numeric path (pile-10k loader, first-64-token truncation, last-position state, SAE encode, top-k) identical 733ecb1 -> HEAD in git diff; s4/s5/SHAPED and s1/s3 used the same commit 8074f5d with opposite outcomes. Base (733ecb1) and audited SFT/GRPO (adab697) predate 8074f5d, whose diff only adds the --hf-model-path branch. Residual: the pre-09-26 cluster-side copy was overwritten (current cluster copy sha256 075b502c... == local HEAD); its content at June cannot be recovered."
+  },
+  "R2_library_versions": {
+   "rank": 5,
+   "records": "DISFAVOURED",
+   "detail": "rs-qwen-env numeric packages all installed <= 2026-04-30 (torch 2.6.0+cu124, cuBLAS 12.4.5.8, transformers 4.57.1, transformer_lens 3.1.0, sae_lens 6.43.0, safetensors 0.7.0); conda history has one event (2025-11-13). Only non-numeric packages installed in the window (06-28 04:21: ftfy, wordfreq, langcodes, locate, msgpack; 07-17 datalad stack; 07-18 h5py; 07-26 nibabel). dist-info mtime is a proxy for install time."
+  },
+  "R4_probe_data": {
+   "rank": 6,
+   "records": "DISFAVOURED",
+   "detail": "NeelNanda/pile-10k last hub commit 2022-10-14 (127bfedc); local cache snapshot 127bfedc recreated 2026-07-07 (same revision); loader code unchanged."
+  },
+  "R5_sae_weights": {
+   "rank": 7,
+   "records": "ELIMINATED (records)",
+   "detail": "Qwen/SAE-Res-Qwen3-1.7B-Base-W32K-L0_50 last hub commit 2026-05-13, before every build; .locks blob ids 7d850585... (layer14) and fea01bf5... (layer22) equal the current hub LFS oids. NOTE: the snapshot itself is no longer in either HF cache (only .locks) -> must be re-downloaded before any GPU job."
+  },
+  "R6_model_weights": {
+   "rank": 8,
+   "records": "ELIMINATED (records)",
+   "detail": "Qwen/Qwen3-1.7B main last commit 2025-07-26 (70d244cc); local snapshot 70d244cc (re-created 2026-09-24)."
+  }
+ },
+ "consequences_for_other_open_items": {
+  "dpo12_same_env_count": "the 12-step graphs were built on A100 (<NODE>). If R1 holds they are NOT same-environment with an H200 base, so the 1/4 'same-environment' count in samebuild_recompute.json is itself mixed-architecture. 60-step graphs come from the same H100 job as the verified 29-step graphs; mc29 graphs are H200.",
+  "llama_replication": "Llama base tulu_v2_base built on A100 (<NODE>, 07-02); the four LSFT seed graphs on H200 (<NODE>, 08-03): the same architecture split as the Qwen failure. Weight source: base graph read the official meta-llama cache (07-02), seed graphs read the NousResearch mirror via a symlink created 08-03 21:53; LFS oids of all four safetensors shards are identical (official queried with token on the cluster), so weights are not a difference.",
+  "seednull_battery": "featstats base/GRPO on A100 (<NODE>), s1/s3/s4/s5 on L40S (<NODE>): two different non-Hopper architectures inside one battery.",
+  "shaped_1p7b_panels": "mwhanna_1p7b_l14to22 (JID 11898371) built on L40S <NODE>, 06-27."
+ },
+ "gpu_prerequisites_found": [
+  "Qwen 1.7B SAE snapshot missing from $WORK/.cache/huggingface/hub (only .locks): re-download layer14/layer22 (online warm-cache) before offline graph loops",
+  "Llama-3.1-8B: models--meta-llama--Llama-3.1-8B is a dangling symlink to models--NousResearch--Meta-Llama-3.1-8B, which is absent: re-download the mirror (~16 GB)",
+  "Llama-Scope fnlp/Llama3_1-8B-Base-LXR-32x: only .locks remain: re-download l16r_32x and l25r_32x",
+  "merged GRPO SHAPED@150 HF dir missing from $HOME/models (not needed by \u00a71/\u00a73/\u00a74)",
+  "/scratch at 4.11/5.00 TB (82.3%) on 2026-10-04 16:xx EDT",
+  "available: lsft-seed0..3, dpo-seed0..3 (12-step), dpo-seed*-step60, dpo-mc-seed*-step29 adapters; audited SFT adapter; merged GRPO s1@200, s3@100, s4@300, s5@300"
+ ],
+ "correction_20261005_gpu_phase": "The graph builder imports transformer_lens 3.2.1 and sae_lens 6.43.0 from the USER site $HOME/.local/lib/python3.10/site-packages (installed 2026-05-10), which precedes the env's site-packages on sys.path; the env's own transformer_lens 3.1.0 is shadowed. ~/.local holds 13 dist-infos, newest 2026-05-10, so no install falls in the 06-26..06-30 window and the R2 verdict (disfavoured) is unchanged. Found from the gba_env_record.py output of smoke 19175665."
+}

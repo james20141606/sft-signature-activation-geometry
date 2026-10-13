@@ -1,0 +1,21 @@
+{
+ "section": "\u00a72 arch (R1/R7)",
+ "pairs": [
+  {
+   "name": "base",
+   "D_edge": 0.0,
+   "bit_exact": true
+  },
+  {
+   "name": "s4_300",
+   "D_edge": 0.0,
+   "bit_exact": true
+  }
+ ],
+ "same_job_repeat": {
+  "D_edge": 0.0,
+  "bit_exact": true
+ },
+ "R1_confirmed_for_base": true,
+ "prereg": "notes/PREREG_graph_build_audit_20261004.md"
+}

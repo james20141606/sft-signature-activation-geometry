@@ -1,0 +1,158 @@
+{
+ "section": "\u00a73 dpo",
+ "doses": {
+  "dpo12": {
+   "per_graph": [
+    {
+     "stored": "$WORK/signature/notes/basediff_dpo_seed0_l14to22.json",
+     "rebuilt": "$WORK/signature/results/graph_build_audit_20261005/run/graphs/dpo12_s0_full.json",
+     "D_edge": 0.03478431757885425,
+     "bit_exact": false
+    },
+    {
+     "stored": "$WORK/signature/notes/basediff_dpo_seed1_l14to22.json",
+     "rebuilt": "$WORK/signature/results/graph_build_audit_20261005/run/graphs/dpo12_s1_full.json",
+     "D_edge": 0.033818324813212786,
+     "bit_exact": false
+    },
+    {
+     "stored": "$WORK/signature/notes/basediff_dpo_seed2_l14to22.json",
+     "rebuilt": "$WORK/signature/results/graph_build_audit_20261005/run/graphs/dpo12_s2_full.json",
+     "D_edge": 0.03285138192190418,
+     "bit_exact": false
+    },
+    {
+     "stored": "$WORK/signature/notes/basediff_dpo_seed3_l14to22.json",
+     "rebuilt": "$WORK/signature/results/graph_build_audit_20261005/run/graphs/dpo12_s3_full.json",
+     "D_edge": 0.030526834071885722,
+     "bit_exact": false
+    }
+   ],
+   "same_env": {
+    "band": [
+     0.029750763471579122,
+     0.03246433841613383
+    ],
+    "band_pairs": [
+     0.03227075954348679,
+     0.03207714257601102,
+     0.03246433841613383,
+     0.03227075954348679,
+     0.030914640149650507,
+     0.029750763471579122
+    ],
+    "contrasts": [
+     0.033625012289843714,
+     0.031689794311583475,
+     0.03265787920519381,
+     0.03285138192190418
+    ],
+    "k_out": 3,
+    "r": 0.9761416944765019
+   }
+  },
+  "dpo60": {
+   "per_graph": [
+    {
+     "stored": "$WORK/signature/notes/basediff_dpo_seed0_step60_l14to22.json",
+     "rebuilt": "$WORK/signature/results/graph_build_audit_20261005/run/graphs/dpo60_s0_full.json",
+     "D_edge": 0.0,
+     "bit_exact": true
+    },
+    {
+     "stored": "$WORK/signature/notes/basediff_dpo_seed1_step60_l14to22.json",
+     "rebuilt": "$WORK/signature/results/graph_build_audit_20261005/run/graphs/dpo60_s1_full.json",
+     "D_edge": 0.0,
+     "bit_exact": true
+    },
+    {
+     "stored": "$WORK/signature/notes/basediff_dpo_seed2_step60_l14to22.json",
+     "rebuilt": "$WORK/signature/results/graph_build_audit_20261005/run/graphs/dpo60_s2_full.json",
+     "D_edge": 0.0,
+     "bit_exact": true
+    },
+    {
+     "stored": "$WORK/signature/notes/basediff_dpo_seed3_step60_l14to22.json",
+     "rebuilt": "$WORK/signature/results/graph_build_audit_20261005/run/graphs/dpo60_s3_full.json",
+     "D_edge": 0.0,
+     "bit_exact": true
+    }
+   ],
+   "same_env": {
+    "band": [
+     0.029362498768351508,
+     0.03285138192190418
+    ],
+    "band_pairs": [
+     0.029750763471579122,
+     0.03285138192190418,
+     0.029362498768351508,
+     0.031302293532827985,
+     0.030914640149650507,
+     0.03072075620322967
+    ],
+    "contrasts": [
+     0.031689794311583475,
+     0.033818324813212786,
+     0.03671345832924311,
+     0.03439803439803435
+    ],
+    "k_out": 3,
+    "r": 0.9646411340295491
+   }
+  },
+  "dpomc29": {
+   "per_graph": [
+    {
+     "stored": "$WORK/signature/notes/basediff_dpo_mc_seed0_step29_l14to22.json",
+     "rebuilt": "$WORK/signature/results/graph_build_audit_20261005/run/graphs/dpomc29_s0_full.json",
+     "D_edge": 0.0,
+     "bit_exact": true
+    },
+    {
+     "stored": "$WORK/signature/notes/basediff_dpo_mc_seed1_step29_l14to22.json",
+     "rebuilt": "$WORK/signature/results/graph_build_audit_20261005/run/graphs/dpomc29_s1_full.json",
+     "D_edge": 0.0,
+     "bit_exact": true
+    },
+    {
+     "stored": "$WORK/signature/notes/basediff_dpo_mc_seed2_step29_l14to22.json",
+     "rebuilt": "$WORK/signature/results/graph_build_audit_20261005/run/graphs/dpomc29_s2_full.json",
+     "D_edge": 0.0,
+     "bit_exact": true
+    },
+    {
+     "stored": "$WORK/signature/notes/basediff_dpo_mc_seed3_step29_l14to22.json",
+     "rebuilt": "$WORK/signature/results/graph_build_audit_20261005/run/graphs/dpomc29_s3_full.json",
+     "D_edge": 0.0,
+     "bit_exact": true
+    }
+   ],
+   "same_env": {
+    "band": [
+     0.03149606299212604,
+     0.035749361618542475
+    ],
+    "band_pairs": [
+     0.03149606299212604,
+     0.0349774022401258,
+     0.035749361618542475,
+     0.031689794311583475,
+     0.033044846577498066,
+     0.035363457760314354
+    ],
+    "contrasts": [
+     0.033238273183203826,
+     0.033044846577498066,
+     0.034011599331563946,
+     0.033238273183203826
+    ],
+    "k_out": 0,
+    "r": 0.9243478787145214
+   }
+  }
+ },
+ "branch": "V2",
+ "dose_wording": "replace: under a same-environment base the counts (3/4, 1/4, 3/4) show no consistent dose ordering; the 0/4, 2/4, 4/4 curve was within the build difference",
+ "prereg": "notes/PREREG_graph_build_audit_20261004.md"
+}

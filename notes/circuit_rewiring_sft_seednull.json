@@ -1,0 +1,116 @@
+{
+  "inputs": {
+    "base": "$WORK/signature/notes/attribution_graph_v1_qwen3-1p7b_qwenscope_l14to22.json",
+    "SFT": "$WORK/signature/notes/basediff_sft_l14to22.json",
+    "SFT_s0": "$WORK/signature/notes/basediff_sft_seed0_l14to22.json",
+    "SFT_s1": "$WORK/signature/notes/basediff_sft_seed1_l14to22.json",
+    "SFT_s2": "$WORK/signature/notes/basediff_sft_seed2_l14to22.json",
+    "SFT_s3": "$WORK/signature/notes/basediff_sft_seed3_l14to22.json",
+    "GRPO": "$WORK/signature/notes/basediff_grpo_l14to22.json"
+  },
+  "hub_k": 32,
+  "post_contrasts": [
+    {
+      "pair": "base->SFT",
+      "edge_jaccard": 0.9372,
+      "weighted_edge_cosine": 0.9976,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "base->SFT_s0",
+      "edge_jaccard": 0.9378,
+      "weighted_edge_cosine": 0.9976,
+      "hub_jaccard": 1.0
+    },
+    {
+      "pair": "base->SFT_s1",
+      "edge_jaccard": 0.9393,
+      "weighted_edge_cosine": 0.9976,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "base->SFT_s2",
+      "edge_jaccard": 0.9412,
+      "weighted_edge_cosine": 0.9977,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "base->SFT_s3",
+      "edge_jaccard": 0.937,
+      "weighted_edge_cosine": 0.9976,
+      "hub_jaccard": 1.0
+    },
+    {
+      "pair": "base->GRPO",
+      "edge_jaccard": 0.9617,
+      "weighted_edge_cosine": 0.999,
+      "hub_jaccard": 0.9394
+    }
+  ],
+  "seed_null": [
+    {
+      "pair": "SFT_s0<->SFT_s1",
+      "edge_jaccard": 0.9639,
+      "weighted_edge_cosine": 0.999,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "SFT_s0<->SFT_s2",
+      "edge_jaccard": 0.9656,
+      "weighted_edge_cosine": 0.999,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "SFT_s0<->SFT_s3",
+      "edge_jaccard": 0.9619,
+      "weighted_edge_cosine": 0.9989,
+      "hub_jaccard": 1.0
+    },
+    {
+      "pair": "SFT_s1<->SFT_s2",
+      "edge_jaccard": 0.965,
+      "weighted_edge_cosine": 0.999,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "SFT_s1<->SFT_s3",
+      "edge_jaccard": 0.9654,
+      "weighted_edge_cosine": 0.999,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "SFT_s2<->SFT_s3",
+      "edge_jaccard": 0.9646,
+      "weighted_edge_cosine": 0.999,
+      "hub_jaccard": 0.9394
+    }
+  ],
+  "verdict": {
+    "edge_jaccard": {
+      "base_to_SFT": 0.9372,
+      "seed_null_range": [
+        0.9619,
+        0.9656
+      ],
+      "seed_null_n_pairs": 6,
+      "seed_null_mean": 0.9644,
+      "seed_null_sd": 0.001367,
+      "z": -19.9,
+      "precision_adequate": true,
+      "rl_signature_beyond_seed_noise": true
+    },
+    "weighted_edge_cosine": {
+      "base_to_SFT": 0.9976,
+      "seed_null_range": [
+        0.9989,
+        0.999
+      ],
+      "seed_null_n_pairs": 6,
+      "seed_null_mean": 0.998983,
+      "seed_null_sd": 4.1e-05,
+      "z": -33.88,
+      "precision_adequate": false,
+      "rl_signature_beyond_seed_noise": false
+    }
+  }
+}

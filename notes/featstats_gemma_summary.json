@@ -1,0 +1,34 @@
+{
+  "base": "notes/featstats_gemma_base_l20.json",
+  "rows": {
+    "base": {
+      "mean_L0": 184.8311,
+      "frac_dead": 0.0029,
+      "n_ever_active": 16337,
+      "firing_freq_gini": 0.4937,
+      "firing_freq_top1pct_active": 0.0773,
+      "meanact_gini": 0.6427,
+      "usage_entropy_nats": 9.2157,
+      "usage_entropy_norm": 0.95
+    },
+    "IT": {
+      "mean_L0": 198.5979,
+      "mean_L0_delta": 13.7668,
+      "frac_dead": 0.0037,
+      "frac_dead_delta": 0.0008,
+      "n_ever_active": 16323,
+      "n_ever_active_delta": -14,
+      "firing_freq_gini": 0.4863,
+      "firing_freq_gini_delta": -0.0074,
+      "firing_freq_top1pct_active": 0.0851,
+      "firing_freq_top1pct_active_delta": 0.0078,
+      "meanact_gini": 0.6443,
+      "meanact_gini_delta": 0.0016,
+      "usage_entropy_nats": 9.2129,
+      "usage_entropy_nats_delta": -0.0028,
+      "usage_entropy_norm": 0.9498,
+      "usage_entropy_norm_delta": -0.0002
+    }
+  },
+  "all_key_metrics_base_dominated": false
+}

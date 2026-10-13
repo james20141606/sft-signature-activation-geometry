@@ -1,0 +1,109 @@
+{
+  "inputs": {
+    "base": "$WORK/signature/notes/attribution_graph_v1_qwen3-1p7b_qwenscope_l14to22.json",
+    "SFT": "$WORK/signature/notes/basediff_sft_l14to22.json",
+    "DPO_s0": "$WORK/signature/notes/basediff_dpo_seed0_step60_l14to22.json",
+    "DPO_s1": "$WORK/signature/notes/basediff_dpo_seed1_step60_l14to22.json",
+    "DPO_s2": "$WORK/signature/notes/basediff_dpo_seed2_step60_l14to22.json",
+    "DPO_s3": "$WORK/signature/notes/basediff_dpo_seed3_step60_l14to22.json"
+  },
+  "hub_k": 32,
+  "post_contrasts": [
+    {
+      "pair": "base->SFT",
+      "edge_jaccard": 0.9372,
+      "weighted_edge_cosine": 0.9976,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "base->DPO_s0",
+      "edge_jaccard": 0.966,
+      "weighted_edge_cosine": 0.9991,
+      "hub_jaccard": 1.0
+    },
+    {
+      "pair": "base->DPO_s1",
+      "edge_jaccard": 0.9648,
+      "weighted_edge_cosine": 0.9991,
+      "hub_jaccard": 1.0
+    },
+    {
+      "pair": "base->DPO_s2",
+      "edge_jaccard": 0.9641,
+      "weighted_edge_cosine": 0.9991,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "base->DPO_s3",
+      "edge_jaccard": 0.9656,
+      "weighted_edge_cosine": 0.9991,
+      "hub_jaccard": 1.0
+    }
+  ],
+  "seed_null": [
+    {
+      "pair": "DPO_s0<->DPO_s1",
+      "edge_jaccard": 0.9702,
+      "weighted_edge_cosine": 0.9992,
+      "hub_jaccard": 1.0
+    },
+    {
+      "pair": "DPO_s0<->DPO_s2",
+      "edge_jaccard": 0.9671,
+      "weighted_edge_cosine": 0.9992,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "DPO_s0<->DPO_s3",
+      "edge_jaccard": 0.9706,
+      "weighted_edge_cosine": 0.9992,
+      "hub_jaccard": 1.0
+    },
+    {
+      "pair": "DPO_s1<->DPO_s2",
+      "edge_jaccard": 0.9687,
+      "weighted_edge_cosine": 0.9992,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "DPO_s1<->DPO_s3",
+      "edge_jaccard": 0.9691,
+      "weighted_edge_cosine": 0.9992,
+      "hub_jaccard": 1.0
+    },
+    {
+      "pair": "DPO_s2<->DPO_s3",
+      "edge_jaccard": 0.9693,
+      "weighted_edge_cosine": 0.9992,
+      "hub_jaccard": 0.9394
+    }
+  ],
+  "verdict": {
+    "edge_jaccard": {
+      "base_to_DPO_s0": 0.966,
+      "seed_null_range": [
+        0.9671,
+        0.9706
+      ],
+      "seed_null_n_pairs": 6,
+      "seed_null_mean": 0.969167,
+      "seed_null_sd": 0.001236,
+      "z": -2.56,
+      "precision_adequate": true,
+      "rl_signature_beyond_seed_noise": false
+    },
+    "weighted_edge_cosine": {
+      "base_to_DPO_s0": 0.9991,
+      "seed_null_range": [
+        0.9992,
+        0.9992
+      ],
+      "seed_null_n_pairs": 6,
+      "seed_null_mean": 0.9992,
+      "seed_null_sd": 0.0,
+      "z": null,
+      "precision_adequate": false,
+      "rl_signature_beyond_seed_noise": false
+    }
+  }
+}

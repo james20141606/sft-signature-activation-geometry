@@ -1,0 +1,95 @@
+{
+ "note": "DESCRIPTIVE, not pre-registered as a test: PREREG \u00a74 branch B3 consequence. Same-environment (H200, JID 19223777) featstats; band = max pairwise |delta| over the 4 GRPO-family runs s1,s3,s4,s5 (6 pairs); GRPO baseline@100 deleted, so base->GRPO cannot be recomputed; base->s_i deltas reported against that band.",
+ "metrics": {
+  "n_ever_active": {
+   "band_max_pairwise": 26,
+   "base_to_run_abs_delta": {
+    "s1": 17,
+    "s3": 12,
+    "s4": 7,
+    "s5": 9
+   },
+   "n_within": 4
+  },
+  "frac_dead": {
+   "band_max_pairwise": 0.0007999999999999952,
+   "base_to_run_abs_delta": {
+    "s1": 0.0005000000000000004,
+    "s3": 0.0002999999999999947,
+    "s4": 0.00020000000000000573,
+    "s5": 0.0002999999999999947
+   },
+   "n_within": 4
+  },
+  "firing_freq_gini": {
+   "band_max_pairwise": 0.00039999999999995595,
+   "base_to_run_abs_delta": {
+    "s1": 0.0,
+    "s3": 0.0,
+    "s4": 0.00029999999999996696,
+    "s5": 0.00039999999999995595
+   },
+   "n_within": 4
+  },
+  "firing_freq_top1pct_active": {
+   "band_max_pairwise": 0.00020000000000000573,
+   "base_to_run_abs_delta": {
+    "s1": 0.00020000000000000573,
+    "s3": 0.00010000000000001674,
+    "s4": 0.00020000000000000573,
+    "s5": 0.00030000000000002247
+   },
+   "n_within": 3
+  },
+  "meanact_gini": {
+   "band_max_pairwise": 0.00039999999999995595,
+   "base_to_run_abs_delta": {
+    "s1": 9.999999999998899e-05,
+    "s3": 9.999999999998899e-05,
+    "s4": 0.00019999999999997797,
+    "s5": 0.00029999999999996696
+   },
+   "n_within": 4
+  },
+  "usage_entropy_nats": {
+   "band_max_pairwise": 0.001200000000000756,
+   "base_to_run_abs_delta": {
+    "s1": 0.001300000000000523,
+    "s3": 0.00039999999999906777,
+    "s4": 0.0008999999999996788,
+    "s5": 0.0015999999999998238
+   },
+   "n_within": 2
+  },
+  "usage_entropy_norm": {
+   "band_max_pairwise": 0.00019999999999997797,
+   "base_to_run_abs_delta": {
+    "s1": 9.999999999998899e-05,
+    "s3": 0.0,
+    "s4": 9.999999999998899e-05,
+    "s5": 0.00019999999999997797
+   },
+   "n_within": 4
+  },
+  "act_mass_per_token": {
+   "band_max_pairwise": 1.8391999999994368,
+   "base_to_run_abs_delta": {
+    "s1": 2.70299999999952,
+    "s3": 0.863800000000083,
+    "s4": 1.09900000000016,
+    "s5": 2.5128999999997177
+   },
+   "n_within": 2
+  },
+  "mean_act_when_active": {
+   "band_max_pairwise": 0.0367999999999995,
+   "base_to_run_abs_delta": {
+    "s1": 0.054000000000002046,
+    "s3": 0.017200000000002547,
+    "s4": 0.02200000000000557,
+    "s5": 0.0502000000000038
+   },
+   "n_within": 2
+  }
+ }
+}

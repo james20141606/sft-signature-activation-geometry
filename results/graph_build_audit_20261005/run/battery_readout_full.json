@@ -1,0 +1,299 @@
+{
+ "section": "\u00a74 battery",
+ "per_file": {
+  "base": {
+   "n_tokens": {
+    "stored": 31906,
+    "recomputed": 31906,
+    "equal": true
+   },
+   "mean_L0": {
+    "stored": 50.0,
+    "recomputed": 50.0,
+    "equal": true
+   },
+   "n_ever_active": {
+    "stored": 27875,
+    "recomputed": 27873,
+    "equal": false
+   },
+   "frac_dead": {
+    "stored": 0.1493,
+    "recomputed": 0.1494,
+    "equal": false
+   },
+   "firing_freq_gini": {
+    "stored": 0.6833,
+    "recomputed": 0.6832,
+    "equal": false
+   },
+   "firing_freq_top1pct_active": {
+    "stored": 0.188,
+    "recomputed": 0.1881,
+    "equal": true
+   },
+   "meanact_gini": {
+    "stored": 0.7328,
+    "recomputed": 0.7328,
+    "equal": true
+   },
+   "usage_entropy_nats": {
+    "stored": 9.1593,
+    "recomputed": 9.1594,
+    "equal": false
+   },
+   "usage_entropy_norm": {
+    "stored": 0.8949,
+    "recomputed": 0.8949,
+    "equal": true
+   },
+   "act_mass_per_token": {
+    "stored": 4347.125,
+    "recomputed": 4347.1114,
+    "equal": false
+   },
+   "mean_act_when_active": {
+    "stored": 86.9425,
+    "recomputed": 86.9422,
+    "equal": false
+   }
+  },
+  "s1": {
+   "n_tokens": {
+    "stored": 31906,
+    "recomputed": 31906,
+    "equal": true
+   },
+   "mean_L0": {
+    "stored": 50.0,
+    "recomputed": 50.0,
+    "equal": true
+   },
+   "n_ever_active": {
+    "stored": 27857,
+    "recomputed": 27856,
+    "equal": false
+   },
+   "frac_dead": {
+    "stored": 0.1499,
+    "recomputed": 0.1499,
+    "equal": true
+   },
+   "firing_freq_gini": {
+    "stored": 0.6832,
+    "recomputed": 0.6832,
+    "equal": true
+   },
+   "firing_freq_top1pct_active": {
+    "stored": 0.1884,
+    "recomputed": 0.1883,
+    "equal": false
+   },
+   "meanact_gini": {
+    "stored": 0.7328,
+    "recomputed": 0.7329,
+    "equal": false
+   },
+   "usage_entropy_nats": {
+    "stored": 9.158,
+    "recomputed": 9.1581,
+    "equal": true
+   },
+   "usage_entropy_norm": {
+    "stored": 0.8948,
+    "recomputed": 0.8948,
+    "equal": true
+   },
+   "act_mass_per_token": {
+    "stored": 4343.7283,
+    "recomputed": 4344.4084,
+    "equal": false
+   },
+   "mean_act_when_active": {
+    "stored": 86.8746,
+    "recomputed": 86.8882,
+    "equal": false
+   }
+  },
+  "s3": {
+   "n_tokens": {
+    "stored": 31906,
+    "recomputed": 31906,
+    "equal": true
+   },
+   "mean_L0": {
+    "stored": 50.0,
+    "recomputed": 50.0,
+    "equal": true
+   },
+   "n_ever_active": {
+    "stored": 27862,
+    "recomputed": 27861,
+    "equal": false
+   },
+   "frac_dead": {
+    "stored": 0.1497,
+    "recomputed": 0.1497,
+    "equal": true
+   },
+   "firing_freq_gini": {
+    "stored": 0.6832,
+    "recomputed": 0.6832,
+    "equal": true
+   },
+   "firing_freq_top1pct_active": {
+    "stored": 0.1882,
+    "recomputed": 0.1882,
+    "equal": true
+   },
+   "meanact_gini": {
+    "stored": 0.7328,
+    "recomputed": 0.7327,
+    "equal": false
+   },
+   "usage_entropy_nats": {
+    "stored": 9.1588,
+    "recomputed": 9.159,
+    "equal": false
+   },
+   "usage_entropy_norm": {
+    "stored": 0.8949,
+    "recomputed": 0.8949,
+    "equal": true
+   },
+   "act_mass_per_token": {
+    "stored": 4345.8693,
+    "recomputed": 4346.2476,
+    "equal": false
+   },
+   "mean_act_when_active": {
+    "stored": 86.9174,
+    "recomputed": 86.925,
+    "equal": false
+   }
+  },
+  "s4": {
+   "n_tokens": {
+    "stored": 31906,
+    "recomputed": 31906,
+    "equal": true
+   },
+   "mean_L0": {
+    "stored": 50.0,
+    "recomputed": 50.0,
+    "equal": true
+   },
+   "n_ever_active": {
+    "stored": 27879,
+    "recomputed": 27880,
+    "equal": false
+   },
+   "frac_dead": {
+    "stored": 0.1492,
+    "recomputed": 0.1492,
+    "equal": true
+   },
+   "firing_freq_gini": {
+    "stored": 0.6835,
+    "recomputed": 0.6835,
+    "equal": true
+   },
+   "firing_freq_top1pct_active": {
+    "stored": 0.1883,
+    "recomputed": 0.1883,
+    "equal": true
+   },
+   "meanact_gini": {
+    "stored": 0.733,
+    "recomputed": 0.733,
+    "equal": true
+   },
+   "usage_entropy_nats": {
+    "stored": 9.1585,
+    "recomputed": 9.1585,
+    "equal": true
+   },
+   "usage_entropy_norm": {
+    "stored": 0.8948,
+    "recomputed": 0.8948,
+    "equal": true
+   },
+   "act_mass_per_token": {
+    "stored": 4345.184,
+    "recomputed": 4346.0124,
+    "equal": false
+   },
+   "mean_act_when_active": {
+    "stored": 86.9037,
+    "recomputed": 86.9202,
+    "equal": false
+   }
+  },
+  "s5": {
+   "n_tokens": {
+    "stored": 31906,
+    "recomputed": 31906,
+    "equal": true
+   },
+   "mean_L0": {
+    "stored": 50.0,
+    "recomputed": 50.0,
+    "equal": true
+   },
+   "n_ever_active": {
+    "stored": 27869,
+    "recomputed": 27882,
+    "equal": false
+   },
+   "frac_dead": {
+    "stored": 0.1495,
+    "recomputed": 0.1491,
+    "equal": false
+   },
+   "firing_freq_gini": {
+    "stored": 0.6834,
+    "recomputed": 0.6836,
+    "equal": false
+   },
+   "firing_freq_top1pct_active": {
+    "stored": 0.1884,
+    "recomputed": 0.1884,
+    "equal": true
+   },
+   "meanact_gini": {
+    "stored": 0.733,
+    "recomputed": 0.7331,
+    "equal": true
+   },
+   "usage_entropy_nats": {
+    "stored": 9.1579,
+    "recomputed": 9.1578,
+    "equal": false
+   },
+   "usage_entropy_norm": {
+    "stored": 0.8947,
+    "recomputed": 0.8947,
+    "equal": true
+   },
+   "act_mass_per_token": {
+    "stored": 4343.8814,
+    "recomputed": 4344.5985,
+    "equal": false
+   },
+   "mean_act_when_active": {
+    "stored": 86.8776,
+    "recomputed": 86.892,
+    "equal": false
+   }
+  }
+ },
+ "all_equal": {
+  "base": false,
+  "s1": false,
+  "s3": false,
+  "s4": false,
+  "s5": false
+ },
+ "branch": "B3",
+ "prereg": "notes/PREREG_graph_build_audit_20261004.md"
+}

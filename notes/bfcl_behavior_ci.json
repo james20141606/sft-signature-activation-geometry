@@ -1,0 +1,94 @@
+{
+  "source": "notes/behavioral_calibration.json (base/SFT JID 12408266; GRPO merge-eval JID 8439216, in-training log 8323921)",
+  "harness": "held-out BFCL validation split, 100 items = 40/20/20/20 over simple_python/multiple/parallel/parallel_multiple; accuracy = unweighted mean of the four category accuracies",
+  "correction": "supersedes n_items=80 / '4 categories x 20' in behavioral_calibration.json",
+  "n_items": 100,
+  "n_per_category": {
+    "simple_python": 40,
+    "multiple": 20,
+    "parallel": 20,
+    "parallel_multiple": 20
+  },
+  "method": "stratified normal approximation, Var=(1/16) sum_c p_c(1-p_c)/n_c; unpaired differences",
+  "base": {
+    "acc": 0.5312,
+    "cats": [
+      0.575,
+      0.65,
+      0.3,
+      0.6
+    ],
+    "var": 0.0024990234375,
+    "se": 0.049990233421139375,
+    "ci95": [
+      0.43321914249456683,
+      0.6291808575054332
+    ],
+    "variance_from": "per-category p_c"
+  },
+  "sft": {
+    "acc": 0.6375,
+    "cats": [
+      0.65,
+      0.8,
+      0.6,
+      0.5
+    ],
+    "var": 0.00238671875,
+    "se": 0.048854055614657006,
+    "ci95": [
+      0.5417460509952722,
+      0.7332539490047277
+    ],
+    "variance_from": "per-category p_c"
+  },
+  "grpo_merge_eval": {
+    "acc": 0.8875,
+    "cats": null,
+    "var": 0.002734375,
+    "se": 0.05229125165837972,
+    "ci95": [
+      0.7850091467495757,
+      0.9899908532504242
+    ],
+    "variance_from": "conservative bound p_c(1-p_c)<=1/4 (no per-category values)"
+  },
+  "grpo_intraining": {
+    "acc": 0.9,
+    "cats": null,
+    "var": 0.002734375,
+    "se": 0.05229125165837972,
+    "ci95": [
+      0.7975091467495757,
+      1.0
+    ],
+    "variance_from": "conservative bound p_c(1-p_c)<=1/4 (no per-category values)"
+  },
+  "delta_sft_vs_base": {
+    "delta": 0.10629999999999995,
+    "se": 0.06989808429062988,
+    "ci95": [
+      -0.030700245209634602,
+      0.2433002452096345
+    ],
+    "excludes_zero": false
+  },
+  "delta_grpo_merge_vs_base": {
+    "delta": 0.35629999999999995,
+    "se": 0.07234223135555054,
+    "ci95": [
+      0.2145092265431209,
+      0.498090773456879
+    ],
+    "excludes_zero": true
+  },
+  "delta_grpo_intraining_vs_base": {
+    "delta": 0.3688,
+    "se": 0.07234223135555054,
+    "ci95": [
+      0.22700922654312097,
+      0.5105907734568791
+    ],
+    "excludes_zero": true
+  }
+}

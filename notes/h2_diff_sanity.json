@@ -1,0 +1,13 @@
+{
+  "pre_path": "notes/attribution_graph_v0.json",
+  "post_path": "notes/attribution_graph_v0.json",
+  "threshold": 0.01,
+  "n_edges_pre_total": 10000,
+  "n_edges_post_total": 10000,
+  "n_edges_pre_above": 2246,
+  "n_edges_post_above": 2246,
+  "jaccard_overlap": 1.0,
+  "weighted_cosine_overlap": 1.0,
+  "n_post_only_edges": 0,
+  "top_post_only_edges": []
+}

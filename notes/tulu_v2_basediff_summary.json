@@ -1,0 +1,49 @@
+{
+  "label": "v2norm",
+  "base_graph": "notes/tulu_v2_base_l16to25.json",
+  "rows": {
+    "base": {
+      "nact": 2746,
+      "d_sae_dst": 131072,
+      "t1": 0.666,
+      "gini": 0.815
+    },
+    "SFT": {
+      "nact": 2350,
+      "d_sae_dst": 131072,
+      "t1": 0.688,
+      "gini": 0.834,
+      "dGini_vs_base": 0.019,
+      "dtop1_vs_base": 0.022,
+      "hub_jaccard_vs_base": 0.73
+    },
+    "DPO": {
+      "nact": 2109,
+      "d_sae_dst": 131072,
+      "t1": 0.675,
+      "gini": 0.831,
+      "dGini_vs_base": 0.016,
+      "dtop1_vs_base": 0.009,
+      "hub_jaccard_vs_base": 0.561
+    },
+    "PPO": {
+      "nact": 2123,
+      "d_sae_dst": 131072,
+      "t1": 0.675,
+      "gini": 0.831,
+      "dGini_vs_base": 0.016,
+      "dtop1_vs_base": 0.009,
+      "hub_jaccard_vs_base": 0.524
+    },
+    "GRPO": {
+      "nact": 2160,
+      "d_sae_dst": 131072,
+      "t1": 0.678,
+      "gini": 0.832,
+      "dGini_vs_base": 0.017,
+      "dtop1_vs_base": 0.012,
+      "hub_jaccard_vs_base": 0.561
+    }
+  },
+  "null_replicates": false
+}

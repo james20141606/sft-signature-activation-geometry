@@ -1,0 +1,54 @@
+{
+  "GRPO": {
+    "log": "shaped-grpo-baseline-sif-8323921.out",
+    "audited_step": 100,
+    "initial_val_acc": null,
+    "val_acc_at_step": 0.9,
+    "at_step_used": 100,
+    "behavioral_delta": null,
+    "curve": {
+      "50": 0.8687499999999999,
+      "100": 0.9,
+      "150": 0.89375,
+      "200": 0.89375
+    }
+  },
+  "GRPO_s1": {
+    "log": "shaped-grpo-baseline-s1-sif-8346929.out",
+    "audited_step": 200,
+    "initial_val_acc": null,
+    "val_acc_at_step": 0.86875,
+    "at_step_used": 200,
+    "behavioral_delta": null,
+    "curve": {
+      "50": 0.875,
+      "100": 0.85,
+      "150": 0.875,
+      "200": 0.86875,
+      "250": 0.8625,
+      "300": 0.8500000000000001
+    }
+  },
+  "GRPO_s3": {
+    "error": "no parsable log for prefix shaped-grpo-baseline-s3-sif"
+  },
+  "GRPO_s4": {
+    "error": "no parsable log for prefix shaped-grpo-baseline-s4-sif"
+  },
+  "GRPO_s5": {
+    "error": "no parsable log for prefix shaped-grpo-baseline-s5-sif"
+  },
+  "SHAPED": {
+    "log": "shaped-grpo-SHAPED-sif-8359388.out",
+    "audited_step": 150,
+    "initial_val_acc": null,
+    "val_acc_at_step": 0.9771964066475629,
+    "at_step_used": 150,
+    "behavioral_delta": null,
+    "curve": {
+      "50": 0.9680351950228214,
+      "100": 0.9782144840806722,
+      "150": 0.9771964066475629
+    }
+  }
+}

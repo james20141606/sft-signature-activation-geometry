@@ -1,0 +1,17 @@
+{
+ "section": "\u00a72 arch (R1/R7)",
+ "pairs": [
+  {
+   "name": "base",
+   "D_edge": 0.0,
+   "bit_exact": true
+  },
+  {
+   "name": "h200_rebuild_0926",
+   "D_edge": 0.03671345832924311,
+   "bit_exact": false
+  }
+ ],
+ "R1_confirmed_for_base": true,
+ "prereg": "notes/PREREG_graph_build_audit_20261004.md"
+}

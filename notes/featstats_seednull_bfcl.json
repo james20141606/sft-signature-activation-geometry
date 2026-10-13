@@ -1,0 +1,76 @@
+{
+  "base": "notes/bfcl_featstats_base_l22.json",
+  "seed_family": [
+    "GRPO",
+    "s1",
+    "s3",
+    "s4",
+    "s5"
+  ],
+  "metrics": {
+    "mean_L0": {
+      "base": 50.0,
+      "grpo": 50.0,
+      "abs_delta_grpo": 0.0,
+      "seed_null_max_pairwise": 0.0,
+      "within_seed_noise": true
+    },
+    "frac_dead": {
+      "base": 0.2868,
+      "grpo": 0.2822,
+      "abs_delta_grpo": 0.0046,
+      "seed_null_max_pairwise": 0.007,
+      "within_seed_noise": true
+    },
+    "firing_freq_gini": {
+      "base": 0.8828,
+      "grpo": 0.8831,
+      "abs_delta_grpo": 0.0003,
+      "seed_null_max_pairwise": 0.0004,
+      "within_seed_noise": true
+    },
+    "firing_freq_top1pct_active": {
+      "base": 0.3762,
+      "grpo": 0.3802,
+      "abs_delta_grpo": 0.004,
+      "seed_null_max_pairwise": 0.0051,
+      "within_seed_noise": true
+    },
+    "meanact_gini": {
+      "base": 0.9062,
+      "grpo": 0.9072,
+      "abs_delta_grpo": 0.001,
+      "seed_null_max_pairwise": 0.0012,
+      "within_seed_noise": true
+    },
+    "usage_entropy_norm": {
+      "base": 0.785,
+      "grpo": 0.7839,
+      "abs_delta_grpo": 0.0011,
+      "seed_null_max_pairwise": 0.0012,
+      "within_seed_noise": true
+    },
+    "act_mass_per_token": {
+      "base": 3634.6775,
+      "grpo": 3651.6271,
+      "abs_delta_grpo": 16.9496,
+      "seed_null_max_pairwise": 21.4226,
+      "within_seed_noise": true
+    },
+    "mean_act_when_active": {
+      "base": 72.6936,
+      "grpo": 73.0325,
+      "abs_delta_grpo": 0.3389,
+      "seed_null_max_pairwise": 0.4284,
+      "within_seed_noise": true
+    },
+    "fvu": {
+      "base": 0.1748,
+      "grpo": 0.1787,
+      "abs_delta_grpo": 0.0039,
+      "seed_null_max_pairwise": 0.0069,
+      "within_seed_noise": true
+    }
+  },
+  "all_metrics_within_seed_noise": true
+}

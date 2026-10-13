@@ -1,0 +1,73 @@
+{
+  "inputs": {
+    "base": "../../notes/tulu_base_l16to25.json",
+    "SFT": "../../notes/tulu_sft_l16to25.json",
+    "DPO": "../../notes/tulu_dpo_l16to25.json",
+    "PPO": "../../notes/tulu_rlvr_ppo_l16to25.json",
+    "GRPO": "../../notes/tulu_rlvr_grpo_l16to25.json"
+  },
+  "hub_k": 32,
+  "stage_increments": [
+    {
+      "pair": "base->SFT",
+      "edge_jaccard": 0.6692,
+      "weighted_edge_cosine": 0.9931,
+      "hub_jaccard": 0.7297,
+      "at_or_above_run_pair_null": false
+    },
+    {
+      "pair": "SFT->DPO",
+      "edge_jaccard": 0.796,
+      "weighted_edge_cosine": 0.992,
+      "hub_jaccard": 0.7297,
+      "at_or_above_run_pair_null": false
+    },
+    {
+      "pair": "DPO->PPO",
+      "edge_jaccard": 0.9579,
+      "weighted_edge_cosine": 0.9998,
+      "hub_jaccard": 0.9394,
+      "at_or_above_run_pair_null": true
+    },
+    {
+      "pair": "DPO->GRPO",
+      "edge_jaccard": 0.906,
+      "weighted_edge_cosine": 0.9993,
+      "hub_jaccard": 0.8824,
+      "at_or_above_run_pair_null": true
+    }
+  ],
+  "cumulative_vs_base": [
+    {
+      "pair": "base->SFT",
+      "edge_jaccard": 0.6692,
+      "weighted_edge_cosine": 0.9931,
+      "hub_jaccard": 0.7297
+    },
+    {
+      "pair": "base->DPO",
+      "edge_jaccard": 0.601,
+      "weighted_edge_cosine": 0.9754,
+      "hub_jaccard": 0.6
+    },
+    {
+      "pair": "base->PPO",
+      "edge_jaccard": 0.6005,
+      "weighted_edge_cosine": 0.9748,
+      "hub_jaccard": 0.6
+    },
+    {
+      "pair": "base->GRPO",
+      "edge_jaccard": 0.6071,
+      "weighted_edge_cosine": 0.9784,
+      "hub_jaccard": 0.561
+    }
+  ],
+  "run_pair_null": {
+    "pair": "PPO<->GRPO",
+    "edge_jaccard": 0.9029,
+    "weighted_edge_cosine": 0.9993,
+    "hub_jaccard": 0.8824
+  },
+  "note": "Stage decomposition of the Tulu-3 staircase. The run-pair null is a SINGLE pair (Tulu-3 PPO vs Tulu-3.1 GRPO) that also differs in algorithm and recipe, so it upper-bounds run noise: conservative for detecting SFT/DPO-scale effects, anti-conservative for certifying the RL null. The RL-null claim rests on the Qwen seed null."
+}

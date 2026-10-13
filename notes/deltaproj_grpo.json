@@ -1,0 +1,12 @@
+{
+  "post_path": "$WORK/grpo_project/checkpoints/grpo-baseline-sif-qwen3-1p7b-step2000/global_step_100/actor/huggingface",
+  "layer": 22,
+  "n_prompts": 200,
+  "n_tokens": 12758,
+  "energy_frac_in_code": 3.0361,
+  "mean_cos_dh_dhhat": 0.2581,
+  "median_pertoken_frac": 3.1814,
+  "p10_frac": 0.2124,
+  "p90_frac": 7.4811,
+  "mean_dh_norm": 25.5012
+}

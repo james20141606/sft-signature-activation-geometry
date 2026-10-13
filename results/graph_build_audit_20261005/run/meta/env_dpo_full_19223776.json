@@ -1,0 +1,68 @@
+{
+ "python": "3.10.19",
+ "platform": "Linux-6.12.0-211.47.1.el10_2.x86_64-x86_64-with-glibc2.39",
+ "host": "<HOST>",
+ "slurm_job_id": "19223776",
+ "slurm_partition": "<SLURM_PARTITION>",
+ "dtype": "bfloat16",
+ "packages": {
+  "torch": "2.6.0+cu124",
+  "transformers": "4.57.1",
+  "transformer_lens": "3.2.1",
+  "transformer-lens": "3.2.1",
+  "sae_lens": "6.43.0",
+  "sae-lens": "6.43.0",
+  "safetensors": "0.7.0",
+  "numpy": "2.1.2",
+  "triton": "3.2.0",
+  "accelerate": "1.11.0",
+  "datasets": "4.3.0",
+  "huggingface_hub": "0.36.0",
+  "tokenizers": "0.22.1",
+  "peft": "0.18.0",
+  "nvidia-cublas-cu12": "12.4.5.8",
+  "nvidia-cudnn-cu12": "9.1.0.70"
+ },
+ "hf_env": {
+  "HF_HOME": "$WORK/.cache/huggingface",
+  "HF_HUB_CACHE": "$WORK/signature/hf_cache/hub",
+  "HF_DATASETS_CACHE": "$WORK/.cache/huggingface/datasets",
+  "HF_HUB_OFFLINE": "1",
+  "HF_DATASETS_OFFLINE": "1"
+ },
+ "torch_cuda": "12.4",
+ "cudnn": 90100,
+ "tf32_matmul": false,
+ "bf16_reduced_precision_reduction": true,
+ "gpu_name": "NVIDIA H200",
+ "gpu_capability": [
+  9,
+  0
+ ],
+ "nvidia_smi": "NVIDIA H200, 610.43.02, 143771 MiB",
+ "builder": {
+  "path": "$WORK/signature/code/scripts/m2_attribution_graph.py",
+  "sha256": "075b502cd34681e345b71ed4ce3c14a2c416cdfa50d0f10b5df9d748febeec8d"
+ },
+ "hf_snapshots": {
+  "Qwen/Qwen3-1.7B": {
+   "cache_dir": "$WORK/signature/hf_cache/hub/models--Qwen--Qwen3-1.7B",
+   "is_symlink": true,
+   "exists": true,
+   "symlink_target": "$WORK/.cache/huggingface/hub/models--Qwen--Qwen3-1.7B",
+   "refs_main": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+   "snapshots": [
+    "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+   ]
+  },
+  "Qwen/SAE-Res-Qwen3-1.7B-Base-W32K-L0_50": {
+   "cache_dir": "$WORK/signature/hf_cache/hub/models--Qwen--SAE-Res-Qwen3-1.7B-Base-W32K-L0_50",
+   "is_symlink": false,
+   "exists": true,
+   "refs_main": "ce1a79d9c5163932d65c417380e53230e1086370",
+   "snapshots": [
+    "ce1a79d9c5163932d65c417380e53230e1086370"
+   ]
+  }
+ }
+}

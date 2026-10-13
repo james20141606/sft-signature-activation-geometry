@@ -1,0 +1,7 @@
+{
+  "n_prompts": 8,
+  "n_samples": 4,
+  "mean_dH": 0.006317399442195892,
+  "cohens_d": 0.0626129162163706,
+  "pass_gate": false
+}

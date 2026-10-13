@@ -1,0 +1,410 @@
+{
+  "l14_f20227": {
+    "layer": 14,
+    "feature": 20227,
+    "firing_rate": 0.5467,
+    "mean_act_overall": 10.53814,
+    "top_contexts": [
+      {
+        "act": 120.5,
+        "prompt": 326,
+        "pos": 38
+      },
+      {
+        "act": 110.5,
+        "prompt": 378,
+        "pos": 17
+      },
+      {
+        "act": 108.5,
+        "prompt": 262,
+        "pos": 4
+      },
+      {
+        "act": 107.0,
+        "prompt": 368,
+        "pos": 14
+      },
+      {
+        "act": 106.5,
+        "prompt": 255,
+        "pos": 15
+      },
+      {
+        "act": 106.0,
+        "prompt": 427,
+        "pos": 31
+      },
+      {
+        "act": 105.0,
+        "prompt": 452,
+        "pos": 8
+      },
+      {
+        "act": 104.5,
+        "prompt": 165,
+        "pos": 21
+      },
+      {
+        "act": 104.0,
+        "prompt": 205,
+        "pos": 1
+      },
+      {
+        "act": 99.5,
+        "prompt": 486,
+        "pos": 26
+      },
+      {
+        "act": 99.5,
+        "prompt": 305,
+        "pos": 60
+      },
+      {
+        "act": 98.5,
+        "prompt": 343,
+        "pos": 40
+      }
+    ]
+  },
+  "l14_f16308": {
+    "layer": 14,
+    "feature": 16308,
+    "firing_rate": 0.98423,
+    "mean_act_overall": 23.17789,
+    "top_contexts": [
+      {
+        "act": 41.25,
+        "prompt": 433,
+        "pos": 3
+      },
+      {
+        "act": 40.5,
+        "prompt": 186,
+        "pos": 11
+      },
+      {
+        "act": 40.0,
+        "prompt": 361,
+        "pos": 8
+      },
+      {
+        "act": 39.75,
+        "prompt": 258,
+        "pos": 8
+      },
+      {
+        "act": 39.5,
+        "prompt": 227,
+        "pos": 3
+      },
+      {
+        "act": 39.0,
+        "prompt": 390,
+        "pos": 20
+      },
+      {
+        "act": 39.0,
+        "prompt": 161,
+        "pos": 19
+      },
+      {
+        "act": 39.0,
+        "prompt": 352,
+        "pos": 5
+      },
+      {
+        "act": 38.5,
+        "prompt": 98,
+        "pos": 3
+      },
+      {
+        "act": 38.5,
+        "prompt": 459,
+        "pos": 6
+      },
+      {
+        "act": 38.25,
+        "prompt": 249,
+        "pos": 6
+      },
+      {
+        "act": 38.25,
+        "prompt": 270,
+        "pos": 6
+      }
+    ]
+  },
+  "l22_f30329": {
+    "layer": 22,
+    "feature": 30329,
+    "firing_rate": 0.62114,
+    "mean_act_overall": 183.15916,
+    "top_contexts": [
+      {
+        "act": 1344.0,
+        "prompt": 85,
+        "pos": 29
+      },
+      {
+        "act": 1184.0,
+        "prompt": 200,
+        "pos": 24
+      },
+      {
+        "act": 1152.0,
+        "prompt": 375,
+        "pos": 55
+      },
+      {
+        "act": 1112.0,
+        "prompt": 402,
+        "pos": 52
+      },
+      {
+        "act": 1072.0,
+        "prompt": 194,
+        "pos": 33
+      },
+      {
+        "act": 1072.0,
+        "prompt": 11,
+        "pos": 39
+      },
+      {
+        "act": 1056.0,
+        "prompt": 250,
+        "pos": 40
+      },
+      {
+        "act": 1048.0,
+        "prompt": 346,
+        "pos": 49
+      },
+      {
+        "act": 1040.0,
+        "prompt": 426,
+        "pos": 34
+      },
+      {
+        "act": 1040.0,
+        "prompt": 430,
+        "pos": 57
+      },
+      {
+        "act": 1032.0,
+        "prompt": 392,
+        "pos": 13
+      },
+      {
+        "act": 1032.0,
+        "prompt": 489,
+        "pos": 61
+      }
+    ]
+  },
+  "l22_f3477": {
+    "layer": 22,
+    "feature": 3477,
+    "firing_rate": 0.10196,
+    "mean_act_overall": 3.92242,
+    "top_contexts": [
+      {
+        "act": 104.5,
+        "prompt": 205,
+        "pos": 56
+      },
+      {
+        "act": 79.5,
+        "prompt": 486,
+        "pos": 40
+      },
+      {
+        "act": 77.0,
+        "prompt": 173,
+        "pos": 60
+      },
+      {
+        "act": 76.0,
+        "prompt": 316,
+        "pos": 56
+      },
+      {
+        "act": 75.0,
+        "prompt": 174,
+        "pos": 46
+      },
+      {
+        "act": 75.0,
+        "prompt": 338,
+        "pos": 43
+      },
+      {
+        "act": 74.5,
+        "prompt": 473,
+        "pos": 52
+      },
+      {
+        "act": 74.5,
+        "prompt": 161,
+        "pos": 38
+      },
+      {
+        "act": 74.0,
+        "prompt": 323,
+        "pos": 45
+      },
+      {
+        "act": 72.5,
+        "prompt": 490,
+        "pos": 29
+      },
+      {
+        "act": 69.0,
+        "prompt": 150,
+        "pos": 42
+      },
+      {
+        "act": 69.0,
+        "prompt": 339,
+        "pos": 61
+      }
+    ]
+  },
+  "l22_f10558": {
+    "layer": 22,
+    "feature": 10558,
+    "firing_rate": 0.00458,
+    "mean_act_overall": 0.3291,
+    "top_contexts": [
+      {
+        "act": 516.0,
+        "prompt": 115,
+        "pos": 7
+      },
+      {
+        "act": 412.0,
+        "prompt": 122,
+        "pos": 57
+      },
+      {
+        "act": 272.0,
+        "prompt": 125,
+        "pos": 5
+      },
+      {
+        "act": 260.0,
+        "prompt": 423,
+        "pos": 33
+      },
+      {
+        "act": 199.0,
+        "prompt": 42,
+        "pos": 28
+      },
+      {
+        "act": 190.0,
+        "prompt": 241,
+        "pos": 63
+      },
+      {
+        "act": 173.0,
+        "prompt": 107,
+        "pos": 33
+      },
+      {
+        "act": 157.0,
+        "prompt": 487,
+        "pos": 39
+      },
+      {
+        "act": 117.0,
+        "prompt": 3,
+        "pos": 9
+      },
+      {
+        "act": 117.0,
+        "prompt": 5,
+        "pos": 14
+      },
+      {
+        "act": 105.0,
+        "prompt": 26,
+        "pos": 54
+      },
+      {
+        "act": 97.5,
+        "prompt": 163,
+        "pos": 40
+      }
+    ]
+  },
+  "l22_f9970": {
+    "layer": 22,
+    "feature": 9970,
+    "firing_rate": 0.00454,
+    "mean_act_overall": 0.25674,
+    "top_contexts": [
+      {
+        "act": 168.0,
+        "prompt": 358,
+        "pos": 43
+      },
+      {
+        "act": 154.0,
+        "prompt": 376,
+        "pos": 57
+      },
+      {
+        "act": 147.0,
+        "prompt": 371,
+        "pos": 27
+      },
+      {
+        "act": 120.0,
+        "prompt": 311,
+        "pos": 57
+      },
+      {
+        "act": 120.0,
+        "prompt": 20,
+        "pos": 60
+      },
+      {
+        "act": 119.0,
+        "prompt": 147,
+        "pos": 58
+      },
+      {
+        "act": 117.0,
+        "prompt": 411,
+        "pos": 51
+      },
+      {
+        "act": 103.0,
+        "prompt": 301,
+        "pos": 57
+      },
+      {
+        "act": 100.5,
+        "prompt": 15,
+        "pos": 41
+      },
+      {
+        "act": 99.5,
+        "prompt": 450,
+        "pos": 24
+      },
+      {
+        "act": 96.0,
+        "prompt": 86,
+        "pos": 35
+      },
+      {
+        "act": 96.0,
+        "prompt": 289,
+        "pos": 55
+      }
+    ]
+  }
+}

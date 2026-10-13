@@ -1,0 +1,39 @@
+{
+  "harness": "verl val_only on the BFCL-v4 validation set (4 categories x 20 = 80 items, mean acc@1). NOT a single job: base/SFT come from JID 12408266 and the GRPO merge-eval from JID 8439216 -- same configuration, run at different times, so an unmeasured harness-version difference is not excluded.",
+  "base": {
+    "acc": 0.5312,
+    "cats": [
+      0.575,
+      0.65,
+      0.3,
+      0.6
+    ],
+    "source": "JID 12408266"
+  },
+  "sft": {
+    "acc": 0.6375,
+    "cats": [
+      0.65,
+      0.8,
+      0.6,
+      0.5
+    ],
+    "source": "JID 12408266 (LoRA merged)"
+  },
+  "grpo_at100": {
+    "acc_intraining": 0.9,
+    "acc_merge_eval": 0.8875,
+    "source": "training log 8323921 @step100; merge-eval 8439216"
+  },
+  "sae_rewiring_z": {
+    "sft": -15.9,
+    "grpo": -0.5
+  },
+  "behavioral_delta_vs_base": {
+    "sft": 0.1063,
+    "grpo": 0.3562
+  },
+  "harness_single_job": false,
+  "n_items": 80,
+  "correction": "2026-09-26: n_items=80 and '4 categories x 20' in 'harness' are superseded: the held-out split has 100 items (40/20/20/20 over simple_python/multiple/parallel/parallel_multiple) and 'acc' is the unweighted mean of the four category accuracies. Corrected intervals: notes/bfcl_behavior_ci.json (code/scripts/bfcl_behavior_ci.py). Values in this file are unchanged."
+}

@@ -1,0 +1,19 @@
+{
+  "graph": "notes/attribution_graph_v1_qwen3-8b_l14to22.json",
+  "backbone": "Qwen/Qwen3-8B",
+  "sae_release": "qwen-scope-3-8b-base-w64k-l50",
+  "n_edges": 10000,
+  "n_active_features": 2091,
+  "top_k": 20,
+  "observed_top1pct_share": 0.35250296499442857,
+  "null": "degree-preserving weight permutation",
+  "n_perm": 3000,
+  "null_mean": 0.2967650183523515,
+  "null_sd": 0.005351368812421279,
+  "null_ci95": [
+    0.28654696896069665,
+    0.30718863559343645
+  ],
+  "z_score": 10.415642912277226,
+  "p_empirical_upper_bound": 0.0003332222592469177
+}

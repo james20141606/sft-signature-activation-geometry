@@ -1,0 +1,19 @@
+{
+  "qwen3-1.7b": {
+    "n_active": 2226,
+    "top1pct_share": 0.4269,
+    "gini": 0.7282,
+    "graph": "notes/attribution_graph_v1_qwen3-1p7b_qwenscope_l14to22.json",
+    "backbone": "Qwen/Qwen3-1.7B",
+    "sae_release": "qwen-scope-3-1.7b-base-w32k-l50"
+  },
+  "qwen3-8b": {
+    "n_active": 2091,
+    "top1pct_share": 0.3525,
+    "gini": 0.7185,
+    "graph": "notes/attribution_graph_v1_qwen3-8b_l14to22.json",
+    "backbone": "Qwen/Qwen3-8B",
+    "sae_release": "qwen-scope-3-8b-base-w64k-l50"
+  },
+  "note": "Width-independence control: inbound-weight Gini computed with the same gini()/stat() code as notes/basediff.py on the committed attribution graphs. 1.7B (d_sae=32768) vs 8B (d_sae=65536/w64k) Gini 0.728 vs 0.719."
+}

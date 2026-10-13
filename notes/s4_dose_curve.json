@@ -1,0 +1,21 @@
+{
+  "null_mean": 0.96256,
+  "null_sd": 0.0015994641959999403,
+  "dose": {
+    "100": {
+      "edge_jaccard": 0.9631,
+      "z": 0.3,
+      "hub_jaccard": 0.939
+    },
+    "200": {
+      "edge_jaccard": 0.9627,
+      "z": 0.1,
+      "hub_jaccard": 1.0
+    },
+    "300": {
+      "edge_jaccard": 0.9639,
+      "z": 0.8,
+      "hub_jaccard": 1.0
+    }
+  }
+}

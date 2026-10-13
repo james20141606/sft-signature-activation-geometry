@@ -1,0 +1,54 @@
+{
+  "post_contrasts": [
+    {
+      "pair": "base->SFT",
+      "edge_jaccard": 0.6971,
+      "weighted_edge_cosine": 0.9912,
+      "hub_jaccard": 0.7297
+    },
+    {
+      "pair": "base->DPO",
+      "edge_jaccard": 0.6284,
+      "weighted_edge_cosine": 0.972,
+      "hub_jaccard": 0.561
+    },
+    {
+      "pair": "base->GRPO",
+      "edge_jaccard": 0.6333,
+      "weighted_edge_cosine": 0.9755,
+      "hub_jaccard": 0.561
+    },
+    {
+      "pair": "base->GRPO_ppo",
+      "edge_jaccard": 0.6265,
+      "weighted_edge_cosine": 0.9713,
+      "hub_jaccard": 0.5238
+    }
+  ],
+  "seed_null": [
+    {
+      "pair": "GRPO<->GRPO_ppo",
+      "edge_jaccard": 0.9033,
+      "weighted_edge_cosine": 0.9991,
+      "hub_jaccard": 0.9394
+    }
+  ],
+  "verdict": {
+    "edge_jaccard": {
+      "base_to_GRPO": 0.6333,
+      "seed_null_range": [
+        0.9033,
+        0.9033
+      ],
+      "rl_signature_beyond_seed_noise": true
+    },
+    "weighted_edge_cosine": {
+      "base_to_GRPO": 0.9755,
+      "seed_null_range": [
+        0.9991,
+        0.9991
+      ],
+      "rl_signature_beyond_seed_noise": true
+    }
+  }
+}

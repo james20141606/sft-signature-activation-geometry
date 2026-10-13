@@ -1,0 +1,1 @@
+{"name":"full_s1","family":"full_sft","base":"base_F","graph":"$WORK/signature/results/sftband_20260926/graphs/full_s1.json","states":"$WORK/signature/results/sftband_20260926/states/full_s1.npz","hf_model_path":"/state/partition1/job-18577380/sftband_18577380/full-seed1","stored_graph":"","jid":"18577380","gpu":"NVIDIA H200, 143771 MiB","host":"<HOST>"}

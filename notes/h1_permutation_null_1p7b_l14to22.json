@@ -1,0 +1,19 @@
+{
+  "graph": "notes/attribution_graph_v1_qwen3-1p7b_qwenscope_l14to22.json",
+  "backbone": "Qwen/Qwen3-1.7B",
+  "sae_release": "qwen-scope-3-1.7b-base-w32k-l50",
+  "n_edges": 10000,
+  "n_active_features": 2226,
+  "top_k": 22,
+  "observed_top1pct_share": 0.42692371191371215,
+  "null": "degree-preserving weight permutation",
+  "n_perm": 3000,
+  "null_mean": 0.3297519506157264,
+  "null_sd": 0.004865192195661844,
+  "null_ci95": [
+    0.32017283718978923,
+    0.3393930652646362
+  ],
+  "z_score": 19.97285151131976,
+  "p_empirical_upper_bound": 0.0003332222592469177
+}

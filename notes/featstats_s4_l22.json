@@ -1,0 +1,22 @@
+{
+  "backbone": "Qwen/Qwen3-1.7B",
+  "hf_model_path": "$HOME/models/grpo_s4_step300_hf",
+  "sae_release": "qwen-scope-3-1.7b-base-w32k-l50",
+  "dst_layer": 22,
+  "dst_hook": "blocks.22.hook_resid_post",
+  "d_sae": 32768,
+  "n_prompts": 500,
+  "n_tokens": 31906,
+  "seq_len": 64,
+  "elapsed_seconds": 17.055994033813477,
+  "mean_L0": 50.0,
+  "n_ever_active": 27879,
+  "frac_dead": 0.1492,
+  "firing_freq_gini": 0.6835,
+  "firing_freq_top1pct_active": 0.1883,
+  "meanact_gini": 0.733,
+  "usage_entropy_nats": 9.1585,
+  "usage_entropy_norm": 0.8948,
+  "act_mass_per_token": 4345.184,
+  "mean_act_when_active": 86.9037
+}

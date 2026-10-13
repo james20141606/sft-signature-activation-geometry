@@ -1,0 +1,92 @@
+{
+  "inputs": {
+    "base": "notes/attribution_graph_v1_qwen3-1p7b_qwenscope_l14to22.json",
+    "GRPO": "notes/basediff_grpo_l14to22.json",
+    "GRPOs1": "notes/basediff_grpo_s1_step300_l14to22.json",
+    "GRPOs4": "notes/basediff_grpo_s4_l14to22.json",
+    "GRPOs5": "notes/basediff_grpo_s5_l14to22.json"
+  },
+  "hub_k": 32,
+  "post_contrasts": [
+    {
+      "pair": "base->GRPO",
+      "edge_jaccard": 0.9617,
+      "weighted_edge_cosine": 0.999,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "base->GRPOs1",
+      "edge_jaccard": 0.961,
+      "weighted_edge_cosine": 0.9989,
+      "hub_jaccard": 1.0
+    },
+    {
+      "pair": "base->GRPOs4",
+      "edge_jaccard": 0.9639,
+      "weighted_edge_cosine": 0.9991,
+      "hub_jaccard": 1.0
+    },
+    {
+      "pair": "base->GRPOs5",
+      "edge_jaccard": 0.9631,
+      "weighted_edge_cosine": 0.999,
+      "hub_jaccard": 1.0
+    }
+  ],
+  "seed_null": [
+    {
+      "pair": "GRPO<->GRPOs1",
+      "edge_jaccard": 0.9623,
+      "weighted_edge_cosine": 0.999,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "GRPO<->GRPOs4",
+      "edge_jaccard": 0.9606,
+      "weighted_edge_cosine": 0.999,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "GRPO<->GRPOs5",
+      "edge_jaccard": 0.9635,
+      "weighted_edge_cosine": 0.999,
+      "hub_jaccard": 0.9394
+    },
+    {
+      "pair": "GRPOs1<->GRPOs4",
+      "edge_jaccard": 0.9616,
+      "weighted_edge_cosine": 0.999,
+      "hub_jaccard": 1.0
+    },
+    {
+      "pair": "GRPOs1<->GRPOs5",
+      "edge_jaccard": 0.9621,
+      "weighted_edge_cosine": 0.999,
+      "hub_jaccard": 1.0
+    },
+    {
+      "pair": "GRPOs4<->GRPOs5",
+      "edge_jaccard": 0.9644,
+      "weighted_edge_cosine": 0.9991,
+      "hub_jaccard": 1.0
+    }
+  ],
+  "verdict": {
+    "edge_jaccard": {
+      "base_to_GRPO": 0.9617,
+      "seed_null_range": [
+        0.9606,
+        0.9644
+      ],
+      "rl_signature_beyond_seed_noise": false
+    },
+    "weighted_edge_cosine": {
+      "base_to_GRPO": 0.999,
+      "seed_null_range": [
+        0.999,
+        0.9991
+      ],
+      "rl_signature_beyond_seed_noise": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "graph": "notes/attribution_graph_v0.json",
+  "backbone": "EleutherAI/pythia-70m-deduped",
+  "sae_release": "pythia-70m-deduped-res-sm",
+  "n_edges": 10000,
+  "n_active_features": 2515,
+  "top_k": 25,
+  "observed_top1pct_share": 0.5111019045032722,
+  "null": "degree-preserving weight permutation",
+  "n_perm": 3000,
+  "null_mean": 0.41159006053259795,
+  "null_sd": 0.004263791503227668,
+  "null_ci95": [
+    0.40426324628466676,
+    0.4210795385917529
+  ],
+  "z_score": 23.338815675049847,
+  "p_empirical_upper_bound": 0.0003332222592469177
+}

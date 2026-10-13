@@ -1,0 +1,76 @@
+{
+  "label": "bfcl_on_task",
+  "base_graph": "notes/bfcl_graph_base_l14to22.json",
+  "rows": {
+    "base": {
+      "nact": 128,
+      "d_sae_dst": 32768,
+      "t1": 0.217,
+      "gini": 0.755
+    },
+    "SFT": {
+      "nact": 116,
+      "d_sae_dst": 32768,
+      "t1": 0.195,
+      "gini": 0.729,
+      "dGini_vs_base": -0.026,
+      "dtop1_vs_base": -0.022,
+      "hub_jaccard_vs_base": 0.829
+    },
+    "GRPO": {
+      "nact": 130,
+      "d_sae_dst": 32768,
+      "t1": 0.222,
+      "gini": 0.762,
+      "dGini_vs_base": 0.007,
+      "dtop1_vs_base": 0.005,
+      "hub_jaccard_vs_base": 0.882
+    },
+    "s1": {
+      "nact": 126,
+      "d_sae_dst": 32768,
+      "t1": 0.224,
+      "gini": 0.753,
+      "dGini_vs_base": -0.002,
+      "dtop1_vs_base": 0.007,
+      "hub_jaccard_vs_base": 0.882
+    },
+    "s3": {
+      "nact": 131,
+      "d_sae_dst": 32768,
+      "t1": 0.217,
+      "gini": 0.761,
+      "dGini_vs_base": 0.006,
+      "dtop1_vs_base": 0.0,
+      "hub_jaccard_vs_base": 0.882
+    },
+    "s4": {
+      "nact": 136,
+      "d_sae_dst": 32768,
+      "t1": 0.216,
+      "gini": 0.768,
+      "dGini_vs_base": 0.013,
+      "dtop1_vs_base": -0.001,
+      "hub_jaccard_vs_base": 0.882
+    },
+    "s5": {
+      "nact": 138,
+      "d_sae_dst": 32768,
+      "t1": 0.22,
+      "gini": 0.772,
+      "dGini_vs_base": 0.017,
+      "dtop1_vs_base": 0.003,
+      "hub_jaccard_vs_base": 0.829
+    },
+    "SHAPED": {
+      "nact": 144,
+      "d_sae_dst": 32768,
+      "t1": 0.217,
+      "gini": 0.781,
+      "dGini_vs_base": 0.026,
+      "dtop1_vs_base": 0.0,
+      "hub_jaccard_vs_base": 0.829
+    }
+  },
+  "null_replicates": false
+}

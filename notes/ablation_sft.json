@@ -1,0 +1,18 @@
+{
+  "model": "$WORK/signature/merged/sft_qwen3_1p7b_merged_hf",
+  "src_feats": [
+    20227,
+    16308
+  ],
+  "dst_feat": 30329,
+  "n_prompts": 200,
+  "n_tokens": 12758,
+  "clean_dst_act": 175.8962,
+  "target_ablate_dst_act": 181.2777,
+  "random_ablate_dst_act": 176.2367,
+  "pathway_strength_target": -5.3815,
+  "pathway_strength_target_pct": -5.68,
+  "pathway_strength_random": -0.3405,
+  "specificity_ratio": 15.8,
+  "mean_kl_clean_target": 0.0104
+}

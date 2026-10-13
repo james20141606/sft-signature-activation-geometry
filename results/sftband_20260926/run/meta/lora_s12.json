@@ -1,0 +1,1 @@
+{"name":"lora_s12","family":"lora_sft","base":"base_L2","graph":"$WORK/signature/results/sftband_20260926/graphs/lora_s12.json","states":"$WORK/signature/results/sftband_20260926/states/lora_s12.npz","hf_model_path":"$WORK/signature/checkpoints/sft-seed12","stored_graph":"","jid":"18577382","gpu":"NVIDIA H200, 143771 MiB","host":"<HOST>"}

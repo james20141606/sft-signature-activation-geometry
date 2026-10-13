@@ -1,0 +1,22 @@
+{
+  "label": "Gemma-2-2B n=500 / gemma-scope l13->20 16k",
+  "base_graph": "notes/basediff_gemma_base_l13to20.json",
+  "rows": {
+    "base": {
+      "nact": 2444,
+      "d_sae_dst": 16384,
+      "t1": 0.347,
+      "gini": 0.708
+    },
+    "IT": {
+      "nact": 2254,
+      "d_sae_dst": 16384,
+      "t1": 0.409,
+      "gini": 0.743,
+      "dGini_vs_base": 0.035,
+      "dtop1_vs_base": 0.062,
+      "hub_jaccard_vs_base": 0.73
+    }
+  },
+  "null_replicates": false
+}

@@ -1,0 +1,9 @@
+{
+  "regime": "tempctrl_sft",
+  "post_ckpt": "$WORK/grpo_project/checkpoints/sft-qwen3-1p7b",
+  "n_prompts": 24,
+  "n_samples": 4,
+  "mean_dH": 0.03472898527979851,
+  "cohens_d": 0.17850027365442922,
+  "pass_gate": false
+}

@@ -1,0 +1,20 @@
+{
+  "backbone": "google/gemma-2-2b",
+  "hf_model_path": null,
+  "sae_release": "gemma-scope-2b-pt-res-canonical",
+  "dst_layer": 20,
+  "dst_hook": "blocks.20.hook_resid_post",
+  "d_sae": 16384,
+  "n_prompts": 500,
+  "n_tokens": 31918,
+  "seq_len": 64,
+  "elapsed_seconds": 25.661030292510986,
+  "mean_L0": 184.8311,
+  "n_ever_active": 16337,
+  "frac_dead": 0.0029,
+  "firing_freq_gini": 0.4937,
+  "firing_freq_top1pct_active": 0.0773,
+  "meanact_gini": 0.6427,
+  "usage_entropy_nats": 9.2157,
+  "usage_entropy_norm": 0.95
+}

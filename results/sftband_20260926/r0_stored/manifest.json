@@ -1,0 +1,145 @@
+{
+  "runs": {
+    "lora_s0": {
+      "family": "lora_sft",
+      "graph": "notes/basediff_sft_seed0_l14to22.json",
+      "base": "base_stored"
+    },
+    "dpo12_s0": {
+      "family": "dpo12",
+      "graph": "notes/basediff_dpo_seed0_l14to22.json",
+      "base": "base_stored"
+    },
+    "dpo29_s0": {
+      "family": "dpo29",
+      "graph": "notes/basediff_dpo_seed0_step29_l14to22.json",
+      "base": "base_stored"
+    },
+    "dpo60_s0": {
+      "family": "dpo60",
+      "graph": "notes/basediff_dpo_seed0_step60_l14to22.json",
+      "base": "base_stored"
+    },
+    "dpomc29_s0": {
+      "family": "dpomc29",
+      "graph": "notes/basediff_dpo_mc_seed0_step29_l14to22.json",
+      "base": "base_stored"
+    },
+    "lora_s1": {
+      "family": "lora_sft",
+      "graph": "notes/basediff_sft_seed1_l14to22.json",
+      "base": "base_stored"
+    },
+    "dpo12_s1": {
+      "family": "dpo12",
+      "graph": "notes/basediff_dpo_seed1_l14to22.json",
+      "base": "base_stored"
+    },
+    "dpo29_s1": {
+      "family": "dpo29",
+      "graph": "notes/basediff_dpo_seed1_step29_l14to22.json",
+      "base": "base_stored"
+    },
+    "dpo60_s1": {
+      "family": "dpo60",
+      "graph": "notes/basediff_dpo_seed1_step60_l14to22.json",
+      "base": "base_stored"
+    },
+    "dpomc29_s1": {
+      "family": "dpomc29",
+      "graph": "notes/basediff_dpo_mc_seed1_step29_l14to22.json",
+      "base": "base_stored"
+    },
+    "lora_s2": {
+      "family": "lora_sft",
+      "graph": "notes/basediff_sft_seed2_l14to22.json",
+      "base": "base_stored"
+    },
+    "dpo12_s2": {
+      "family": "dpo12",
+      "graph": "notes/basediff_dpo_seed2_l14to22.json",
+      "base": "base_stored"
+    },
+    "dpo29_s2": {
+      "family": "dpo29",
+      "graph": "notes/basediff_dpo_seed2_step29_l14to22.json",
+      "base": "base_stored"
+    },
+    "dpo60_s2": {
+      "family": "dpo60",
+      "graph": "notes/basediff_dpo_seed2_step60_l14to22.json",
+      "base": "base_stored"
+    },
+    "dpomc29_s2": {
+      "family": "dpomc29",
+      "graph": "notes/basediff_dpo_mc_seed2_step29_l14to22.json",
+      "base": "base_stored"
+    },
+    "lora_s3": {
+      "family": "lora_sft",
+      "graph": "notes/basediff_sft_seed3_l14to22.json",
+      "base": "base_stored"
+    },
+    "dpo12_s3": {
+      "family": "dpo12",
+      "graph": "notes/basediff_dpo_seed3_l14to22.json",
+      "base": "base_stored"
+    },
+    "dpo29_s3": {
+      "family": "dpo29",
+      "graph": "notes/basediff_dpo_seed3_step29_l14to22.json",
+      "base": "base_stored"
+    },
+    "dpo60_s3": {
+      "family": "dpo60",
+      "graph": "notes/basediff_dpo_seed3_step60_l14to22.json",
+      "base": "base_stored"
+    },
+    "dpomc29_s3": {
+      "family": "dpomc29",
+      "graph": "notes/basediff_dpo_mc_seed3_step29_l14to22.json",
+      "base": "base_stored"
+    },
+    "sft_audited": {
+      "family": "audited_sft",
+      "graph": "notes/basediff_sft_l14to22.json",
+      "base": "base_stored"
+    },
+    "grpo_base100": {
+      "family": "grpo",
+      "graph": "notes/basediff_grpo_l14to22.json",
+      "base": "base_stored"
+    },
+    "grpo_s1_200": {
+      "family": "grpo",
+      "graph": "notes/basediff_grpo_s1_l14to22.json",
+      "base": "base_stored"
+    },
+    "grpo_s3_100": {
+      "family": "grpo",
+      "graph": "notes/basediff_grpo_s3_l14to22.json",
+      "base": "base_stored"
+    },
+    "grpo_s4_300": {
+      "family": "grpo",
+      "graph": "notes/basediff_grpo_s4_l14to22.json",
+      "base": "base_stored"
+    },
+    "grpo_s5_300": {
+      "family": "grpo",
+      "graph": "notes/basediff_grpo_s5_l14to22.json",
+      "base": "base_stored"
+    },
+    "grpo_shaped150": {
+      "family": "grpo",
+      "graph": "notes/basediff_grpo_shaped_l0p1_l14to22.json",
+      "base": "base_stored"
+    }
+  },
+  "bases": {
+    "base_stored": {
+      "graph": "notes/attribution_graph_v1_qwen3-1p7b_qwenscope_l14to22.json"
+    }
+  },
+  "continuity": []
+}

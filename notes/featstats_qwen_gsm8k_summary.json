@@ -1,0 +1,52 @@
+{
+  "base": "notes/featstats_base_l22_gsm8k.json",
+  "rows": {
+    "base": {
+      "mean_L0": 50.0,
+      "frac_dead": 0.36,
+      "n_ever_active": 20973,
+      "firing_freq_gini": 0.8402,
+      "firing_freq_top1pct_active": 0.3654,
+      "meanact_gini": 0.8826,
+      "usage_entropy_nats": 7.936,
+      "usage_entropy_norm": 0.7975
+    },
+    "SFT": {
+      "mean_L0": 50.0,
+      "mean_L0_delta": 0.0,
+      "frac_dead": 0.3769,
+      "frac_dead_delta": 0.0169,
+      "n_ever_active": 20418,
+      "n_ever_active_delta": -555,
+      "firing_freq_gini": 0.8406,
+      "firing_freq_gini_delta": 0.0004,
+      "firing_freq_top1pct_active": 0.3598,
+      "firing_freq_top1pct_active_delta": -0.0056,
+      "meanact_gini": 0.8789,
+      "meanact_gini_delta": -0.0037,
+      "usage_entropy_nats": 7.9317,
+      "usage_entropy_nats_delta": -0.0043,
+      "usage_entropy_norm": 0.7992,
+      "usage_entropy_norm_delta": 0.0017
+    },
+    "GRPO": {
+      "mean_L0": 50.0,
+      "mean_L0_delta": 0.0,
+      "frac_dead": 0.3596,
+      "frac_dead_delta": -0.0004,
+      "n_ever_active": 20983,
+      "n_ever_active_delta": 10,
+      "firing_freq_gini": 0.84,
+      "firing_freq_gini_delta": -0.0002,
+      "firing_freq_top1pct_active": 0.3661,
+      "firing_freq_top1pct_active_delta": 0.0007,
+      "meanact_gini": 0.8829,
+      "meanact_gini_delta": 0.0003,
+      "usage_entropy_nats": 7.9344,
+      "usage_entropy_nats_delta": -0.0016,
+      "usage_entropy_norm": 0.7973,
+      "usage_entropy_norm_delta": -0.0002
+    }
+  },
+  "all_key_metrics_base_dominated": true
+}

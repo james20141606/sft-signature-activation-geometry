@@ -1,0 +1,27 @@
+{
+ "section": "\u00a72 arch (R1/R7)",
+ "pairs": [
+  {
+   "name": "sft_audited_A100",
+   "D_edge": 0.0,
+   "bit_exact": true
+  },
+  {
+   "name": "h200base_vs_0926",
+   "D_edge": 0.0,
+   "bit_exact": true
+  },
+  {
+   "name": "dpo12s0_H200_vs_stored_A100",
+   "D_edge": 0.03478431757885425,
+   "bit_exact": false
+  },
+  {
+   "name": "llama_base_H200_vs_stored_A100",
+   "D_edge": 0.022543009689539262,
+   "bit_exact": false
+  }
+ ],
+ "R1_confirmed_for_base": false,
+ "prereg": "notes/PREREG_graph_build_audit_20261004.md"
+}

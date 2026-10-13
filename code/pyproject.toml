@@ -1,0 +1,9 @@
+[project]
+name = "signature"
+version = "0.0.1"
+description = "Mechanistic signature of agent RL — analysis pipeline (Paper B)"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--import-mode=importlib -q"

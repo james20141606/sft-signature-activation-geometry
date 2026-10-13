@@ -1,0 +1,9 @@
+{
+  "regime": "shaped_lambda01",
+  "post_ckpt": "$WORK/grpo_project/checkpoints/grpo-SHAPED-lambda0.1-sif-qwen3-1p7b-step150/global_step_150/actor/huggingface",
+  "n_prompts": 24,
+  "n_samples": 4,
+  "mean_dH": -0.024080853909254074,
+  "cohens_d": -0.2881834562337368,
+  "pass_gate": false
+}

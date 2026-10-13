@@ -1,0 +1,12 @@
+{
+  "post_path": "$WORK/signature/merged/sft_qwen3_1p7b_merged_hf",
+  "layer": 22,
+  "n_prompts": 200,
+  "n_tokens": 12758,
+  "energy_frac_in_code": 1.9142,
+  "mean_cos_dh_dhhat": 0.3161,
+  "median_pertoken_frac": 1.9987,
+  "p10_frac": 0.3193,
+  "p90_frac": 4.2922,
+  "mean_dh_norm": 41.8615
+}
