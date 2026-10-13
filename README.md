@@ -74,12 +74,7 @@ sweep (`preregistrations/PREREG_functional_transfer_full_20260924.md`): it refus
 receipt whose n or held-out row hash differs from `notes/functional_transfer_full_heldout_count.json`.
 
 `code/scripts/check_retractions.py` additionally reads the compiled paper (`main.pdf`, the arXiv
-PDF) and needs `pdftotext` (poppler). On this release it reports one finding and exits 1: a positive rule
-requires the abstract to state that a dictionary-width control removes the apparent scaling law in
-graph concentration. The arXiv abstract was shortened for arXiv's length limit and omits that
-clause; the introduction and the appendix ("The dictionary-width artifact in full") still state it.
-`check_table_main.py` and `check_main_numbers.py` pin two abstract sentences whose wording the short
-abstract changed (the numbers did not change); their pins were updated to the short wording.
+PDF) and needs `pdftotext` (poppler).
 
 With `numpy` installed, `python3 code/scripts/audit_conventions.py` reruns the top-k convention
 audit. With `numpy`, `matplotlib`, `svgutils`, headless Google Chrome and `pdffonts` (poppler),

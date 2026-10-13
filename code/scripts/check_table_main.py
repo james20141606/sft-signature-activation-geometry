@@ -184,7 +184,7 @@ def check(tex):
     # 2026-09-24: the functional-transfer ratios (formerly the k=5000 pilot's 65x / 13.5x)
     # are pinned by check_functional_transfer.py against the registered sweep receipts.
     for label, s in [("SFT z", "$%.1f$ pairwise-distance" % abs(aud_z)),
-                     ("gap/spread", "a gap $%.1f\\times$ and $%.1f\\times$ the spreads of the two arms" % ratio)]:
+                     ("gap/spread", "a gap $%.1f\\times$ and $%.1f\\times$ the two arms' spreads" % ratio)]:
         if s not in " ".join(a.split()):
             bad.append("abstract %s: expected %r" % (label, s))
     return bad

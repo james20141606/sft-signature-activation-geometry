@@ -332,7 +332,7 @@ def check_dose_restatements(flat, bad):
         bad.append("dose-curve recompute failed (%s)" % e)
         return
     wants = [
-        ("abstract", "DPO band counts ($%d/4$, $%d/4$, $%d/4$ contrasts outside at $12$, $29$, "
+        ("abstract", "DPO's band counts ($%d/4$, $%d/4$, $%d/4$ contrasts outside at $12$, $29$, "
                      "$60$ steps) show no consistent dose ordering while its displacement stays flat"
          % (c0, c1, c2)),
         ("Fig.1 caption", "DPO's band counts ($%d/4$, $%d/4$, $%d/4$ contrasts outside at "
@@ -997,8 +997,8 @@ def selftest(tex):
          "\\sigma_{\\mathrm{seed}}>10\\delta$ on every band",
          "\\sigma_{\\mathrm{seed}}>11\\delta$ on every band"),
         ("abstract dose curve: 1/4 -> 2/4",
-         "DPO band counts ($3/4$, $1/4$,\n$3/4$ contrasts outside",
-         "DPO band counts ($3/4$, $2/4$,\n$3/4$ contrasts outside"),
+         "DPO's band counts ($3/4$, $1/4$,\n$3/4$ contrasts outside",
+         "DPO's band counts ($3/4$, $2/4$,\n$3/4$ contrasts outside"),
         ("Fig.1 caption dose curve: order flip 3,1,3 -> 1,3,3",
          "band counts ($3/4$, $1/4$, $3/4$ contrasts outside at $12/29/60$",
          "band counts ($1/4$, $3/4$, $3/4$ contrasts outside at $12/29/60$"),
