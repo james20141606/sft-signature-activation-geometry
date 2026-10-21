@@ -19,6 +19,7 @@
 {\normalfont $^{*}$Corresponding author: \texttt{xc1490@nyu.edu}}}
 \date{}
 
+\usepackage{longtable,array}
 \newcommand{\coderepo}{\url{https://github.com/james20141606/sft-signature-activation-geometry}}
 \begin{document}
 \maketitle
@@ -64,7 +65,7 @@ Interpretability work reads post-training off exactly this kind of diff: a stati
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig1_r1_20261010/fig1.pdf}
-\caption{\textbf{LoRA-SFT moves the co-activation graph further from its base than its own reruns sit apart, on two backbones; DPO's contrasts sit at their band's edge, light GRPO's inside it.} Rows are the arms of Table~\ref{tab:main}; shading spans the seed-pair distances (open circles; a range, not an interval); filled points are base-to-post contrasts (diamond: audited SFT checkpoint); counts are contrasts beyond every seed pair. DPO's band counts ($3/4$, $1/4$, $3/4$ contrasts outside at $12/29/60$ steps) follow no dose ordering. All graphs in a row were built on one GPU architecture (H200). Drawn by \texttt{code/analysis/fig1\_r1\_strip.py} from \texttt{results/\{sftband\_20260926,graph\_build\_audit\_20261005\}/}.}
+\caption{\textbf{LoRA-SFT moves the co-activation graph further from its base than its own reruns sit apart, on two backbones; DPO's contrasts sit at their band's edge, light GRPO's inside it.} Rows are the arms of Table~\ref{tab:main}; shading spans the seed-pair distances (open circles; a range, not an interval); filled points are base-to-post contrasts (diamond: audited SFT checkpoint); counts are contrasts beyond every seed pair. DPO's band counts ($3/4$, $1/4$, $3/4$ contrasts outside at $12/29/60$ steps) follow no dose ordering. All graphs in a row were built on one GPU architecture (H200).}
 \label{fig:bands}
 \end{figure}
 
@@ -130,7 +131,7 @@ The intuition: the band is built from only $k$ runs, and any of the $k+1$ runs c
 
 \begin{table}[t]
 \centering
-\caption{\textbf{SFT moves the graph further than its own reruns on two backbones; DPO's band counts follow no dose ordering; light GRPO is not resolved from a wider band.} Each arm has $k$ independently seeded runs and $k(k-1)/2$ seed pairs; entries are displacements $D=1-J$ (Eq.~\ref{eq:band}). ``Outside'' counts contrasts more displaced than every seed pair; $z$ is descriptive (Proposition~\ref{prop:band}) and computed at full precision. Base and run graphs of every row were built on one GPU architecture (H200); the archived readings of the submitted version, which crossed architectures, are in Table~\ref{tab:archived}. Receipts: \texttt{results/\{sftband\_20260926,graph\_build\_audit\_20261005\}/}, recomputed by \texttt{code/scripts/samearch.py} (App.~\ref{app:build}).}
+\caption{\textbf{SFT moves the graph further than its own reruns on two backbones; DPO's band counts follow no dose ordering; light GRPO is not resolved from a wider band.} Each arm has $k$ independently seeded runs and $k(k-1)/2$ seed pairs; entries are displacements $D=1-J$ (Eq.~\ref{eq:band}). ``Outside'' counts contrasts more displaced than every seed pair; $z$ is descriptive (Proposition~\ref{prop:band}) and computed at full precision. Base and run graphs of every row were built on one GPU architecture (H200); the archived readings of the submitted version, which crossed architectures, are in Table~\ref{tab:archived}.}
 \label{tab:main}
 \footnotesize
 \setlength{\tabcolsep}{4pt}
@@ -161,7 +162,7 @@ The Qwen base graph is highly concentrated: the top $1\%$ of active destination 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/overhaul_20260924/fig3_base_control.pdf}
-\caption{\textbf{The concentration a single-checkpoint study would credit to RL is already present in the zero-RL base.} One row per checkpoint in the base-diff summary. (a)~Top-$1\%$ inbound share: every Qwen checkpoint sits on or next to its base (vertical rule), far from the degree-preserving permutation null of the base graph ($95\%$ range shaded). (b)~Change in Gini against the base; the shading is $\pm$ the largest $|\Delta\mathrm{Gini}|$ among the five Qwen rows ($0.005$), not a statistical null. (c)~Top-$32$ hub Jaccard against the base. Gemma-2-2B-it is a different family and a heavier recipe; the comparison is descriptive. Receipts: \texttt{notes/basediff\_\{qwen,gemma\}\_summary.json}, \texttt{h1\_permutation\_null\_1p7b\_l14to22.json}.}
+\caption{\textbf{The concentration a single-checkpoint study would credit to RL is already present in the zero-RL base.} One row per checkpoint in the base-diff summary. (a)~Top-$1\%$ inbound share: every Qwen checkpoint sits on or next to its base (vertical rule), far from the degree-preserving permutation null of the base graph ($95\%$ range shaded). (b)~Change in Gini against the base; the shading is $\pm$ the largest $|\Delta\mathrm{Gini}|$ among the five Qwen rows ($0.005$), not a statistical null. (c)~Top-$32$ hub Jaccard against the base. Gemma-2-2B-it is a different family and a heavier recipe; the comparison is descriptive.}
 \label{fig:base-control}
 \end{figure}
 
@@ -189,7 +190,7 @@ A public pipeline releases one checkpoint per stage and algorithm, so it shows w
 
 \begin{table}[t]
 \centering
-\caption{\textbf{At production scale SFT and DPO write most of the displacement, but one checkpoint per stage gives no seed band to score it against} (Tulu-3 staircase, Llama-3.1-8B, Llama-Scope layers $16{\to}25$, $n{=}500$, unnormalized v1 operating point; at the normalized one $\Delta$Gini${}\le0.019$, App.~\ref{app:tulu_robust}). Left: levels vs.\ base (base Gini $0.780$). Right: stage increments; the reference is one PPO/GRPO run pair ($0.903$), not a seed distribution. Receipts: \texttt{notes/tulu\_*.json} (v1; \texttt{tulu\_v2\_*} normalized).}
+\caption{\textbf{At production scale SFT and DPO write most of the displacement, but one checkpoint per stage gives no seed band to score it against} (Tulu-3 staircase, Llama-3.1-8B, Llama-Scope layers $16{\to}25$, $n{=}500$, unnormalized v1 operating point; at the normalized one $\Delta$Gini${}\le0.019$, App.~\ref{app:tulu_robust}). Left: levels vs.\ base (base Gini $0.780$). Right: stage increments; the reference is one PPO/GRPO run pair ($0.903$), not a seed distribution.}
 \label{tab:tulu}
 \footnotesize
 \begin{tabular}{lrr|lrr}
@@ -296,7 +297,7 @@ Figure~\ref{fig:dissociation} plots the behavioral sanity check; provenance and 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.42\textwidth]{figures/fig_dissociation.pdf}
-\caption{\textbf{Sanity check: GRPO did learn the behavior it was trained for.} On the held-out BFCL validation split ($100$ items, $40$/$20$/$20$/$20$ over four categories, from the same release files as the training rows; accuracy is the unweighted category mean), GRPO improves accuracy $+0.36$ over base (95\% CI $[+0.21,+0.50]$); SFT's $+0.11$ is not resolved from zero by this harness ($[-0.03,+0.24]$). Intervals are stratified normal approximations and the gains are unpaired (\texttt{notes/bfcl\_behavior\_ci.json}, \texttt{code/scripts/bfcl\_behavior\_ci.py}). \emph{Only behavior is plotted --- there is deliberately no internal axis here}, because placing the two on one pair of axes is the withdrawn dissociation claim drawn: accuracy is measured on BFCL task states, displacement on general text, and the matched on-task internal arm fails its own positive control (App.~\ref{app:ontask}, L5). The corresponding internal readings are reported where they are calibrated (Sec.~\ref{sec:results-rewiring}), not here.}
+\caption{\textbf{Sanity check: GRPO did learn the behavior it was trained for.} On the held-out BFCL validation split ($100$ items, $40$/$20$/$20$/$20$ over four categories, from the same release files as the training rows; accuracy is the unweighted category mean), GRPO improves accuracy $+0.36$ over base (95\% CI $[+0.21,+0.50]$); SFT's $+0.11$ is not resolved from zero by this harness ($[-0.03,+0.24]$). Intervals are stratified normal approximations and the gains are unpaired. \emph{Only behavior is plotted --- there is deliberately no internal axis here}, because placing the two on one pair of axes is the withdrawn dissociation claim drawn: accuracy is measured on BFCL task states, displacement on general text, and the matched on-task internal arm fails its own positive control (App.~\ref{app:ontask}, L5). The corresponding internal readings are reported where they are calibrated (Sec.~\ref{sec:results-rewiring}), not here.}
 \label{fig:dissociation}
 \end{figure}
 \section{Setup and reproducibility}
@@ -319,7 +320,7 @@ The control of Table~\ref{tab:randsae} replaces the trained \texttt{qwen-scope} 
 
 \begin{table}[h]
 \centering
-\caption{\textbf{Random-dictionary control (pile arm): a single random dictionary preserves the SFT separation and the GRPO non-detection against the GRPO-family band.} The trained-SAE column reads the archived graphs (App.~\ref{app:build}); the random-direction graphs were not rebuild-tested. The displacement audit re-run with the trained SAE replaced by a random-direction encoder (matched $d_{\text{SAE}}=32{,}768$, top-$k$ calibrated to the trained SAE's mean $L_0\approx50$); the seed null is recomputed from the same $15$ GRPO-family pairs under each dictionary. One random draw (seed $0$): the control shows the detection does not need the trained dictionary, not that it is invariant across random ones. Random projections churn more in absolute terms (lower null mean), but the standardized separation is preserved. Receipt: \texttt{notes/circuit\_rewiring\_randsae.json}.}
+\caption{\textbf{Random-dictionary control (pile arm): a single random dictionary preserves the SFT separation and the GRPO non-detection against the GRPO-family band.} The trained-SAE column reads the archived graphs (App.~\ref{app:build}); the random-direction graphs were not rebuild-tested. The displacement audit re-run with the trained SAE replaced by a random-direction encoder (matched $d_{\text{SAE}}=32{,}768$, top-$k$ calibrated to the trained SAE's mean $L_0\approx50$); the seed null is recomputed from the same $15$ GRPO-family pairs under each dictionary. One random draw (seed $0$): the control shows the detection does not need the trained dictionary, not that it is invariant across random ones. Random projections churn more in absolute terms (lower null mean), but the standardized separation is preserved.}
 \label{tab:randsae}
 \small
 \begin{tabular}{lrr}
@@ -419,7 +420,7 @@ This appendix holds the full text of results whose summaries appear in Sec.~\ref
 
 \begin{table}[h]
 \centering
-\caption{\textbf{Archived build: the readings of the submitted Table~1, recomputed at full precision from the archived graphs.} Base and run graphs of most rows were built on different GPU architectures (column ``built on'': base / runs), so these readings are superseded by Table~\ref{tab:main}. The submitted version printed $z$ from four-decimal similarities (DPO $29$ steps $-3.61$ to $-0.01$, audited SFT $-19.9$); counts are unchanged by that rounding. Recomputed by \texttt{code/scripts/samearch.py} from \texttt{notes/}.}
+\caption{\textbf{Archived build: the readings of the submitted Table~1, recomputed at full precision from the archived graphs.} Base and run graphs of most rows were built on different GPU architectures (column ``built on'': base / runs), so these readings are superseded by Table~\ref{tab:main}. The submitted version printed $z$ from four-decimal similarities (DPO $29$ steps $-3.61$ to $-0.01$, audited SFT $-19.9$); counts are unchanged by that rounding.}
 \label{tab:archived}
 \footnotesize
 \setlength{\tabcolsep}{3pt}
@@ -450,7 +451,7 @@ Qwen GRPO family & L40S / A100, L40S, H200 & 6 & $0.0336$--$0.0394$ & $0.0016$ &
 
 \begin{table}[h]
 \centering
-\caption{\textbf{Discussion-period band counts by readout} (contrasts outside their own band; one GPU architecture; same-job bases). LoRA-SFT and full-parameter SFT carry registered branches (L1, F1, RS1); DPO at $29$ steps and GRPO are descriptive (GRPO: five runs, the baseline checkpoint being deleted). Receipts: \texttt{results/sftband\_20260926/sftband\_\{verdict,readouts\}.json}.}
+\caption{\textbf{Discussion-period band counts by readout} (contrasts outside their own band; one GPU architecture; same-job bases). LoRA-SFT and full-parameter SFT carry registered branches (L1, F1, RS1); DPO at $29$ steps and GRPO are descriptive (GRPO: five runs, the baseline checkpoint being deleted).}
 \label{tab:readouts}
 \small
 \begin{tabular}{lcccc}
@@ -580,7 +581,7 @@ Gemma-2-2B / gemma-scope & base & --- (Gini $0.708$) & --- & --- & --- \\
 \begin{figure}[h]
 \centering
 \includegraphics[width=1.0000\textwidth]{figures/integrated_20260923/fig03_redrawn.pdf}
-\caption{\textbf{Available layer-pair coverage and concentration.} Every point is one source-to-destination co-activation graph; diamonds are destination means and rules the observed min--max range. Numbers above the plot count available source layers. The lower panel shows the unbalanced source/destination coverage. The rise from about 22\% to 49\% is descriptive of this available scan, not an isolated destination-depth effect. Terminal layer 35 is excluded as unembedding-dominated. Source: the 47 committed Qwen3-8B layer-pair receipts (\texttt{notes/attribution\_graph\_v1\_qwen3-8b\_l*to*.json}); generator \texttt{code/analysis/fig7\_concentration\_vs\_depth.py}.}
+\caption{\textbf{Available layer-pair coverage and concentration.} Every point is one source-to-destination co-activation graph; diamonds are destination means and rules the observed min--max range. Numbers above the plot count available source layers. The lower panel shows the unbalanced source/destination coverage. The rise from about 22\% to 49\% is descriptive of this available scan, not an isolated destination-depth effect. Terminal layer 35 is excluded as unembedding-dominated.}
 \label{fig:h1-concentration}
 \end{figure}
 
@@ -607,7 +608,7 @@ max & $3597$ & 23554 & $1109$ & 36 \\
 
 \begin{table}[h]
 \centering
-\caption{\textbf{H1 concentration is scale-stable.} Top-1\% (of active features) inbound-weight share and Gini at matched relative depth ($n{=}500$, $10{,}000$ edges), across two SAE families and $0.6$--$14$B. Both families are flat-to-slightly-decreasing with scale; the dictionary-relative ``top-1\%-of-$d_{\text{SAE}}$'' (last column) rises only because wider dictionaries place more features in a fixed $1\%$. The \texttt{qwen-scope}~\citep{deng2026qwenscope} rows are the committed receipt \texttt{gini\_width\_control\_qwen\_1p7b\_vs\_8b.json}; the transcoder rows (circuit-tracer Qwen3 transcoders~\citep{hanna2025circuittracer}) come from the sweep job scripts in the supplement (no committed per-run summary JSON).}
+\caption{\textbf{H1 concentration is scale-stable.} Top-1\% (of active features) inbound-weight share and Gini at matched relative depth ($n{=}500$, $10{,}000$ edges), across two SAE families and $0.6$--$14$B. Both families are flat-to-slightly-decreasing with scale; the dictionary-relative ``top-1\%-of-$d_{\text{SAE}}$'' (last column) rises only because wider dictionaries place more features in a fixed $1\%$. The \texttt{qwen-scope}~\citep{deng2026qwenscope} rows come from a committed receipt; the transcoder rows (circuit-tracer Qwen3 transcoders~\citep{hanna2025circuittracer}) come from the sweep job scripts (no committed per-run summary).}
 \label{tab:h1_scale}
 \small
 \begin{tabular}{llrrr}
@@ -676,7 +677,7 @@ base$\to$SFT s0/s1/s2/s3 (own null) & $0.937$--$0.941$ & $-20.0$ to $-17.0$ & $\
 \begin{figure}[h]
 \centering
 \includegraphics[width=1.0000\textwidth]{figures/r1_20261007/fig06_seednull_samearch.pdf}
-\caption{\textbf{A run-variation reference and the diagnostic battery.} (a)~Base and run graphs built on one architecture (H200), the $10$ seed pairs of the five rebuildable GRPO-family runs, 0 of the five base-to-RL contrasts below the band, and base-to-SFT at $z=-19.8$, $5.0\times$ the null range beyond it; the shaped-reward arm is marked separately, and the archived six-run version is Table~\ref{tab:rewiring}. The SFT shift exceeds this empirical range; it does not establish the absence of a smaller RL effect. (b)~Level deltas against each checkpoint's own base from the archived metric files (descriptive, App.~\ref{app:build}); TopK-fixed and unavailable values are marked. Receipts: (a)~the base, GRPO and audited-SFT graph JSONs in \texttt{results/sftband\_20260926/run/graphs/}, read by \texttt{code/scripts/samearch.py}; (b)~the \texttt{featstats\_*}/\texttt{tulu\_featstats\_*} JSONs; generator \texttt{code/analysis/fig\_seednull\_battery.py}.}
+\caption{\textbf{A run-variation reference and the diagnostic battery.} (a)~Base and run graphs built on one architecture (H200), the $10$ seed pairs of the five rebuildable GRPO-family runs, 0 of the five base-to-RL contrasts below the band, and base-to-SFT at $z=-19.8$, $5.0\times$ the null range beyond it; the shaped-reward arm is marked separately, and the archived six-run version is Table~\ref{tab:rewiring}. The SFT shift exceeds this empirical range; it does not establish the absence of a smaller RL effect. (b)~Level deltas against each checkpoint's own base from the archived metric files (descriptive, App.~\ref{app:build}); TopK-fixed and unavailable values are marked.}
 \label{fig:seednull}
 \end{figure}
 
@@ -757,7 +758,7 @@ $J=[\Delta(\mathrm{SFT},D_{\mathrm{SFT}})-\Delta(\mathrm{SFT},D_{\mathrm{base}})
 \centering
 \small
 \setlength{\tabcolsep}{2.8pt}
-\caption{\textbf{Registered sweep ($n=4{,}816$ held-out prompts; sweep verdict: \textbf{MIXED}).} A is the audited SFT graph with its own adapter (the only configuration read for the verdict); $^{\dagger}$descriptive: B is a second matched SFT run (seed 0), C the pilot's mismatched pairing at full $n$. $\Delta$: $\Delta(\mathrm{SFT},D_{\mathrm{SFT}})$ in nats; ratios are mean $\Delta$ over the matched random control in the SFT cell ($D_{\mathrm{SFT}}$, SFT model) and the base cell ($D_{\mathrm{base}}$, base model); a base-cell ratio below $1$ fails the gate (F3), and then $J$ is not read. Receipts \texttt{notes/functional\_transfer\_full\_\{A,B,C\}\_k*.json}, read only by \texttt{functional\_transfer\_sweep\_read.py}.}
+\caption{\textbf{Registered sweep ($n=4{,}816$ held-out prompts; sweep verdict: \textbf{MIXED}).} A is the audited SFT graph with its own adapter (the only configuration read for the verdict); $^{\dagger}$descriptive: B is a second matched SFT run (seed 0), C the pilot's mismatched pairing at full $n$. $\Delta$: $\Delta(\mathrm{SFT},D_{\mathrm{SFT}})$ in nats; ratios are mean $\Delta$ over the matched random control in the SFT cell ($D_{\mathrm{SFT}}$, SFT model) and the base cell ($D_{\mathrm{base}}$, base model); a base-cell ratio below $1$ fails the gate (F3), and then $J$ is not read.}
 \label{tab:functional}
 \begin{tabular}{llcccccccc}
 \toprule
@@ -783,7 +784,7 @@ C$^{\dagger}$ & $5{,}000$ & $104/97$ & $0.548$ & $22\times$ & $2.0\times$ & $-0.
 \begin{figure}[t]
 \centering
 \includegraphics[width=1.0000\textwidth]{figures/integrated_20260923/fig05_redrawn.pdf}
-\caption{\textbf{Checkpoint levels and stage increments answer different questions.} (a) Co-activation-graph Gini for Qwen3-1.7B light recipes, Gemma-2-2B heavy instruction tuning, and the Llama-3.1-8B Tulu-3 sequence. Levels alone do not identify an RL effect. (b) Stage displacement is 1 minus edge Jaccard. The dashed line is one public PPO/GRPO pair (0.097), not a same-recipe seed-null distribution. The RLVR increments are unresolved against that single reference; they are not certified nulls. Receipts: \texttt{notes/basediff\_\{qwen,gemma\}\_summary.json}, \texttt{tulu\_basediff\_summary.json}, \texttt{tulu\_stage\_increments.json} (v1); generator \texttt{code/analysis/fig\_staircase\_money.py}.}
+\caption{\textbf{Checkpoint levels and stage increments answer different questions.} (a) Co-activation-graph Gini for Qwen3-1.7B light recipes, Gemma-2-2B heavy instruction tuning, and the Llama-3.1-8B Tulu-3 sequence. Levels alone do not identify an RL effect. (b) Stage displacement is 1 minus edge Jaccard. The dashed line is one public PPO/GRPO pair (0.097), not a same-recipe seed-null distribution. The RLVR increments are unresolved against that single reference; they are not certified nulls.}
 \label{fig:staircase-data}
 \end{figure}
 
@@ -804,7 +805,7 @@ The base-stable concentration admits a pretraining-crystallized reading: \citet{
 
 \begin{table}[h]
 \centering
-\caption{\textbf{H2 top-8 per-feature mean-activation deltas (committed shaped-$\lambda0.1$ arm, cross-tokenizer, \texttt{h2\_diff\_v0\_cross\_tokenizer.json}, $n=16$ probes).} Under this reward-shaped arm three of the four v0-graph inbound hubs (\texttt{h1\_summary\_v0.json}) are among the top-8 movers, all \emph{negative} (the fourth, $\#5158$, moves $-0.0003$); the same $16$ of the $32$ panel features stay active (weighted cosine $0.9998$, Jaccard $1.0$).}
+\caption{\textbf{H2 top-8 per-feature mean-activation deltas (committed shaped-$\lambda0.1$ arm, cross-tokenizer, $n=16$ probes).} Under this reward-shaped arm three of the four v0-graph inbound hubs are among the top-8 movers, all \emph{negative} (the fourth, $\#5158$, moves $-0.0003$); the same $16$ of the $32$ panel features stay active (weighted cosine $0.9998$, Jaccard $1.0$).}
 \label{tab:h2_delta}
 \small
 \begin{tabular}{lrrrl}
@@ -827,7 +828,7 @@ Feature ID & Mean act.\ (pre) & Mean act.\ (post) & $\Delta$ & In hub set? \\
 
 \begin{table}[h]
 \centering
-\caption{\textbf{H3 per-feature entropy deltas (top-5 gainers + top-5 collapsers), committed cross-tokenizer run (\texttt{h3\_entropy\_cross\_tokenizer\_v0.json}, v0 Pythia-70m panel).} Two of the four v0-graph inbound hubs ($\#8286$, $\#32255$) are among the top-5 gainers ($\Delta=+0.11$); a third ($\#9666$) ties the fifth row at $+0.110$ (four features share this value; the receipt's tie order drops it); the aggregate delta is nonetheless negligible ($d=-0.005$, gate not passed).}
+\caption{\textbf{H3 per-feature entropy deltas (top-5 gainers + top-5 collapsers), committed cross-tokenizer run, v0 Pythia-70m panel.} Two of the four v0-graph inbound hubs ($\#8286$, $\#32255$) are among the top-5 gainers ($\Delta=+0.11$); a third ($\#9666$) ties the fifth row at $+0.110$ (four features share this value; the receipt's tie order drops it); the aggregate delta is nonetheless negligible ($d=-0.005$, gate not passed).}
 \label{tab:h3_delta}
 \small
 \begin{tabular}{lrrrl}
@@ -862,7 +863,7 @@ Figure~\ref{fig:backbone-recurrence} scans a $15$-hub panel across $31$ destinat
 \begin{figure}[h]
 \centering
 \includegraphics[width=1.0000\textwidth]{figures/integrated_20260923/fig07_redrawn.pdf}
-\caption{\textbf{A layer-local diagnostic of the audited index slots.} (a) Count of the fifteen audited integer slots present in any top-30 set at each destination. (b) Their maximum inbound share within that destination. (c) Number of available source graphs. The SAE dictionaries were trained independently by layer: identical integer indices are not aligned features. This plot therefore reports local slot statistics, not cross-layer feature recurrence or preserved feature identity. Layer 35 is unembedding-dominated. Receipt: \texttt{notes/fig8\_backbone\_recurrence\_data.json}; generator \texttt{code/analysis/fig8\_layer\_index\_diagnostic.py}.}
+\caption{\textbf{A layer-local diagnostic of the audited index slots.} (a) Count of the fifteen audited integer slots present in any top-30 set at each destination. (b) Their maximum inbound share within that destination. (c) Number of available source graphs. The SAE dictionaries were trained independently by layer: identical integer indices are not aligned features. This plot therefore reports local slot statistics, not cross-layer feature recurrence or preserved feature identity. Layer 35 is unembedding-dominated.}
 \label{fig:backbone-recurrence}
 \end{figure}
 
@@ -875,5 +876,30 @@ Figure~\ref{fig:h2_delta} shows the per-feature pre- vs.\ post-GRPO mean activat
 \caption{\textbf{H2 per-feature delta diagnostic (cross-tokenizer, $n=16$ probes).} (a) Per-feature mean activation pre (SFT) vs.\ post (shaped-reward GRPO, shaped-$\lambda0.1$ arm), $32$ features. v0-panel top features (amber diamonds) sit on the diagonal with small \emph{negative} deltas, consistent with this arm's reward penalizing the panel's activations. (b) Histogram of post$-$pre deltas; the four v0-panel top features are marked. Cosine $0.9998$ is consistent with the delta magnitudes shown ($\sim\!5\%$ of pre-activation mean), not numerical precision.}
 \label{fig:h2_delta}
 \end{figure}
+
+\section{Figure and table sources}
+\label{app:sources}
+Every number in a figure or table is read from a committed receipt in the code release; the files and generators are listed here rather than in the captions.
+{\small\begin{longtable}{@{}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.83\textwidth}@{}}
+\toprule Item & Receipts and generator \\ \midrule
+\endhead
+Fig.~\ref{fig:bands} & Drawn by \texttt{code/analysis/fig1\_r1\_strip.py} from \texttt{results/\{sftband\_20260926,graph\_build\_audit\_20261005\}/}. \\
+Table~\ref{tab:main} & \texttt{results/\{sftband\_20260926,graph\_build\_audit\_20261005\}/}, recomputed by \texttt{code/scripts/samearch.py} (App.~\ref{app:build}). \\
+Fig.~\ref{fig:base-control} & \texttt{notes/basediff\_\{qwen,gemma\}\_summary.json}, \texttt{h1\_permutation\_null\_1p7b\_l14to22.json}. \\
+Table~\ref{tab:tulu} & \texttt{notes/tulu\_*.json} (v1; \texttt{tulu\_v2\_*} normalized). \\
+Table~\ref{tab:randsae} & \texttt{notes/circuit\_rewiring\_randsae.json}. \\
+Table~\ref{tab:archived} & Recomputed by \texttt{code/scripts/samearch.py} from \texttt{notes/}. \\
+Table~\ref{tab:readouts} & \texttt{results/sftband\_20260926/sftband\_\{verdict,readouts\}.json}. \\
+Fig.~\ref{fig:h1-concentration} & Source: the 47 committed Qwen3-8B layer-pair receipts (\texttt{notes/attribution\_graph\_v1\_qwen3-8b\_l*to*.json}); generator \texttt{code/analysis/fig7\_concentration\_vs\_depth.py}. \\
+Table~\ref{tab:h1_scale} & Qwen-scope rows: \texttt{gini\_width\_control\_qwen\_1p7b\_vs\_8b.json}; transcoder rows: sweep job scripts, no per-run summary JSON. \\
+Fig.~\ref{fig:seednull} & (a)~the base, GRPO and audited-SFT graph JSONs in \texttt{results/sftband\_20260926/run/graphs/}, read by \texttt{code/scripts/samearch.py}; (b)~the \texttt{featstats\_*}/\texttt{tulu\_featstats\_*} JSONs; generator \texttt{code/analysis/fig\_seednull\_battery.py}. \\
+Table~\ref{tab:functional} & \texttt{notes/functional\_transfer\_full\_\{A,B,C\}\_k*.json}, read only by \texttt{functional\_transfer\_sweep\_read.py}. \\
+Fig.~\ref{fig:staircase-data} & \texttt{notes/basediff\_\{qwen,gemma\}\_summary.json}, \texttt{tulu\_basediff\_summary.json}, \texttt{tulu\_stage\_increments.json} (v1); generator \texttt{code/analysis/fig\_staircase\_money.py}. \\
+Table~\ref{tab:h2_delta} & Inbound hubs: \texttt{h1\_summary\_v0.json}. \texttt{h2\_diff\_v0\_cross\_tokenizer.json}. \\
+Fig.~\ref{fig:backbone-recurrence} & \texttt{notes/fig8\_backbone\_recurrence\_data.json}; generator \texttt{code/analysis/fig8\_layer\_index\_diagnostic.py}. \\
+Fig.~\ref{fig:dissociation} & \texttt{notes/bfcl\_behavior\_ci.json}; generator \texttt{code/scripts/bfcl\_behavior\_ci.py}. \\
+Table~\ref{tab:h3_delta} & \texttt{h3\_entropy\_cross\_tokenizer\_v0.json}. \\
+\bottomrule
+\end{longtable}}
 
 \end{document}
